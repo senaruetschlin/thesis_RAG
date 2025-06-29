@@ -2,6 +2,8 @@ import os
 import requests
 import zipfile
 from pathlib import Path
+import re, decimal
+import tiktoken
 
 def download_finqa_dataset(output_path="data"):
     """
@@ -192,3 +194,291 @@ def download_finder_dataset(output_path="data"):
 
     print(f"FinDER dataset saved in: {data_dir}")
     return str(data_dir)
+
+def preprocess_finqa_sample(sample, tokenizer=None, max_bpe_tokens=100):
+    # Set up tokenizer if not provided
+    if tokenizer is None:
+        tokenizer = tiktoken.get_encoding("cl100k_base")  # OpenAI's default
+
+    # Helper: sentence split (simple, can be improved)
+    def sentence_split(text):
+        import re
+        # Split on period, question mark, exclamation, or newline
+        return [s.strip() for s in re.split(r'(?<=[.?!])\s+|\n', text) if s.strip()]
+
+    # Helper: concatenate sentences ≤ max_bpe_tokens
+    def segment_sentences(sentences):
+        segments = []
+        current = ""
+        for sent in sentences:
+            if not current:
+                current = sent
+            else:
+                # Try adding the next sentence
+                test = current + " " + sent
+                if len(tokenizer.encode(test)) <= max_bpe_tokens:
+                    current = test
+                else:
+                    segments.append(current)
+                    current = sent
+        if current:
+            segments.append(current)
+        return segments
+
+    # 1. qid
+    qid = "FinQA_" + str(sample["id"])
+    # 2. dataset
+    dataset = "FinQA"
+    # 3. question
+    question = sample["qa"]["question"]
+    # 4. answer
+    answer = sample["qa"]["answer"]
+    # 5. context_text
+    pre_text = sample.get("pre_text", [])
+    post_text = sample.get("post_text", [])
+    
+    # Handle pre_text and post_text as lists of strings
+    if isinstance(pre_text, list):
+        pre_sentences = []
+        for text_chunk in pre_text:
+            if isinstance(text_chunk, str):
+                pre_sentences.extend(sentence_split(text_chunk))
+    else:
+        pre_sentences = sentence_split(pre_text) if isinstance(pre_text, str) else []
+    
+    if isinstance(post_text, list):
+        post_sentences = []
+        for text_chunk in post_text:
+            if isinstance(text_chunk, str):
+                post_sentences.extend(sentence_split(text_chunk))
+    else:
+        post_sentences = sentence_split(post_text) if isinstance(post_text, str) else []
+    
+    sentences = pre_sentences + post_sentences
+    context_text = segment_sentences(sentences)
+    # 6. context_table
+    context_table = sample.get("table")
+    # 7. reasoning
+    reasoning = len(sample["qa"].get("steps", [])) > 1
+    # 8. reason_type
+    steps = sample["qa"].get("steps", [])
+    reason_type = steps[0]["op"] if steps else None
+    # 9. gold_text_id
+    gold_text_id = ["text_" + str(i) for i in sample["qa"].get("ann_text_rows",[])]
+    # 10. gold_table_row
+    gold_table_row = sample["qa"].get("ann_table_rows", [])
+    # 11. meta
+    meta = {
+        "tfidftopn": sample.get("tfidftopn"),
+        "table_retrieved": sample.get("table_retrieved"),
+        "text_retrieved": sample.get("text_retrieved"),
+    }
+
+    return {
+        "qid": qid,
+        "dataset": dataset,
+        "question": question,
+        "answer": answer,
+        "context_text": context_text,
+        "context_table": context_table,
+        "reasoning": reasoning,
+        "reason_type": reason_type,
+        "gold_text_id": gold_text_id,
+        "gold_table_row": gold_table_row,
+        "meta": meta,
+    }
+
+# Wrapper to process a whole dataset
+def preprocess_finqa_dataset(finqa_data, tokenizer=None, max_bpe_tokens=100):
+    return [preprocess_finqa_sample(sample, tokenizer, max_bpe_tokens) for sample in finqa_data]
+
+
+def canonicalise_answer(ans: str) -> str:
+    # remove $ and commas
+    ans = ans.replace('$','').replace(',','').strip()
+    # convert percentages to decimal strings
+    if ans.endswith('%'):
+        try:
+            ans = str(decimal.Decimal(ans[:-1]) / 100)
+        except decimal.InvalidOperation:
+            pass
+    return ans.lower()
+
+
+def preprocess_convinqa_sample_simple(sample, tokenizer=None, max_bpe_tokens=100):
+    # Set up tokenizer if not provided
+    if tokenizer is None:
+        tokenizer = tiktoken.get_encoding("cl100k_base")  # OpenAI's default
+
+    # Helper: sentence split (simple, can be improved)
+    def sentence_split(text):
+        # Split on period, question mark, exclamation, or newline
+        return [s.strip() for s in re.split(r'(?<=[.?!])\s+|\n', text) if s.strip()]
+
+    # Helper: concatenate sentences ≤ max_bpe_tokens
+    def segment_sentences(sentences):
+        segments = []
+        current = ""
+        for sent in sentences:
+            if not current:
+                current = sent
+            else:
+                # Try adding the next sentence
+                test = current + " " + sent
+                if len(tokenizer.encode(test)) <= max_bpe_tokens:
+                    current = test
+                else:
+                    segments.append(current)
+                    current = sent
+        if current:
+            segments.append(current)
+        return segments
+
+    # 1. qid
+    qid = "ConvFinQA_" + str(sample["id"])
+    # 2. dataset
+    dataset = "ConvFinQA"
+    # 3. question
+    question = sample["qa"]["question"]
+    # 4. answer
+    answer = sample["qa"]["answer"]
+    # 5. context_text
+    pre_text = sample.get("pre_text", [])
+    post_text = sample.get("post_text", [])
+    
+    # Handle pre_text and post_text as lists of strings
+    if isinstance(pre_text, list):
+        pre_sentences = []
+        for text_chunk in pre_text:
+            if isinstance(text_chunk, str):
+                pre_sentences.extend(sentence_split(text_chunk))
+    else:
+        pre_sentences = sentence_split(pre_text) if isinstance(pre_text, str) else []
+    
+    if isinstance(post_text, list):
+        post_sentences = []
+        for text_chunk in post_text:
+            if isinstance(text_chunk, str):
+                post_sentences.extend(sentence_split(text_chunk))
+    else:
+        post_sentences = sentence_split(post_text) if isinstance(post_text, str) else []
+    
+    sentences = pre_sentences + post_sentences
+    context_text = segment_sentences(sentences)
+    # 6. context_table
+    context_table = sample.get("table")
+    # 7. reasoning
+    reasoning = len(sample["qa"].get("steps", [])) > 1
+    # 8. reason_type
+    steps = sample["qa"].get("steps", [])
+    reason_type = steps[0]["op"] if steps else None
+    # 9. gold_text_id - ConvFinQA specific: use qa.ann_text_rows
+    gold_text_id = ["text_" + str(i) for i in sample["qa"].get("ann_text_rows", [])]
+    # 10. gold_table_row
+    gold_table_row = sample["qa"].get("ann_table_rows", [])
+    # 11. meta - ConvFinQA specific: keep dialogue_break, turn_ind, etc.
+    annotation = sample.get("annotation", {})
+    meta = {
+        "dialogue_break": annotation.get("dialogue_break", []),
+        "turn_ind": annotation.get("turn_ind"),
+        "cur_dial": annotation.get("cur_dial"),
+        "cur_program": annotation.get("cur_program"),
+        "cur_type": annotation.get("cur_type"),
+        "exe_ans_list": annotation.get("exe_ans_list", []),
+        "original_program": annotation.get("original_program"),
+        "step_list": annotation.get("step_list", []),
+        "answer_list": annotation.get("answer_list", []),
+        "qa_split": annotation.get("qa_split"),
+        "turn_program": annotation.get("turn_program"),
+        "turn_program_ori": annotation.get("turn_program_ori"),
+        "dialogue_break_ori": annotation.get("dialogue_break_ori"),
+        "gold_ind": annotation.get("gold_ind"),
+        "amt_table": annotation.get("amt_table"),
+        "amt_pre_text": annotation.get("amt_pre_text"),
+        "amt_post_text": annotation.get("amt_post_text"),
+    }
+
+    return {
+        "qid": qid,
+        "dataset": dataset,
+        "question": question,
+        "answer": answer,
+        "context_text": context_text,
+        "context_table": context_table,
+        "reasoning": reasoning,
+        "reason_type": reason_type,
+        "gold_text_id": gold_text_id,
+        "gold_table_row": gold_table_row,
+        "meta": meta,
+    }
+
+def preprocess_convinqa_dataset_simple(convinqa_data, tokenizer=None, max_bpe_tokens=100):
+    return [preprocess_convinqa_sample_simple(sample, tokenizer, max_bpe_tokens) for sample in convinqa_data]
+
+def preprocess_finder_sample(sample, tokenizer=None, max_bpe_tokens=100):
+    if tokenizer is None:
+        tokenizer = tiktoken.get_encoding("cl100k_base")
+
+    # Helper: sentence split
+    def sentence_split(text):
+        return [s.strip() for s in re.split(r'(?<=[.?!])\s+|\n', text) if s.strip()]
+
+    # Helper: concatenate sentences ≤ max_bpe_tokens
+    def segment_sentences(sentences):
+        segments = []
+        current = ""
+        for sent in sentences:
+            if not current:
+                current = sent
+            else:
+                test = current + " " + sent
+                if len(tokenizer.encode(test)) <= max_bpe_tokens:
+                    current = test
+                else:
+                    segments.append(current)
+                    current = sent
+        if current:
+            segments.append(current)
+        return segments
+
+    # 1. qid
+    qid = "FinDER_" + str(sample["_id"])
+    # 2. dataset
+    dataset = "FinDER"
+    # 3. question
+    question = sample["text"]
+    # 4. answer (canonicalised)
+    answer = canonicalise_answer(sample["answer"])
+    # 5. context_text: split each entry in references into sentences or 100-token chunks
+    context_text = []
+    for ref in sample.get("references", []):
+        context_text.extend(segment_sentences(sentence_split(ref)))
+    # 6. context_table: always empty
+    context_table = []
+    # 7. reasoning: already boolean
+    reasoning = sample["reasoning"]
+    # 8. reason_type: type field
+    reason_type = sample.get("type")
+    # 9. gold_text_id: ["ref_0", "ref_1", ...]
+    gold_text_id = [f"ref_{i}" for i in range(len(sample.get("references", [])))]
+    # 10. gold_table_row: always empty
+    gold_table_row = []
+    # 11. meta: category
+    meta = {"category": sample.get("category")}
+
+    return {
+        "qid": qid,
+        "dataset": dataset,
+        "question": question,
+        "answer": answer,
+        "context_text": context_text,
+        "context_table": context_table,
+        "reasoning": reasoning,
+        "reason_type": reason_type,
+        "gold_text_id": gold_text_id,
+        "gold_table_row": gold_table_row,
+        "meta": meta,
+    }
+
+def preprocess_finder_dataset(finder_data, tokenizer=None, max_bpe_tokens=100):
+    return [preprocess_finder_sample(sample, tokenizer, max_bpe_tokens) for sample in finder_data]
