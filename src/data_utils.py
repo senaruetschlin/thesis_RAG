@@ -306,16 +306,12 @@ def canonicalise_answer(ans: str) -> str:
 
 
 def preprocess_convinqa_sample_simple(sample, tokenizer=None, max_bpe_tokens=100):
-    # Set up tokenizer if not provided
     if tokenizer is None:
         tokenizer = tiktoken.get_encoding("cl100k_base")  # OpenAI's default
 
-    # Helper: sentence split (simple, can be improved)
     def sentence_split(text):
-        # Split on period, question mark, exclamation, or newline
         return [s.strip() for s in re.split(r'(?<=[.?!])\s+|\n', text) if s.strip()]
 
-    # Helper: concatenate sentences ≤ max_bpe_tokens
     def segment_sentences(sentences):
         segments = []
         current = ""
@@ -323,7 +319,6 @@ def preprocess_convinqa_sample_simple(sample, tokenizer=None, max_bpe_tokens=100
             if not current:
                 current = sent
             else:
-                # Try adding the next sentence
                 test = current + " " + sent
                 if len(tokenizer.encode(test)) <= max_bpe_tokens:
                     current = test
@@ -334,19 +329,13 @@ def preprocess_convinqa_sample_simple(sample, tokenizer=None, max_bpe_tokens=100
             segments.append(current)
         return segments
 
-    # 1. qid
     qid = "ConvFinQA_" + str(sample["id"])
-    # 2. dataset
     dataset = "ConvFinQA"
-    # 3. question
     question = sample["qa"]["question"]
-    # 4. answer
     answer = sample["qa"]["answer"]
-    # 5. context_text
     pre_text = sample.get("pre_text", [])
     post_text = sample.get("post_text", [])
-    
-    # Handle pre_text and post_text as lists of strings
+
     if isinstance(pre_text, list):
         pre_sentences = []
         for text_chunk in pre_text:
@@ -354,7 +343,7 @@ def preprocess_convinqa_sample_simple(sample, tokenizer=None, max_bpe_tokens=100
                 pre_sentences.extend(sentence_split(text_chunk))
     else:
         pre_sentences = sentence_split(pre_text) if isinstance(pre_text, str) else []
-    
+
     if isinstance(post_text, list):
         post_sentences = []
         for text_chunk in post_text:
@@ -362,26 +351,26 @@ def preprocess_convinqa_sample_simple(sample, tokenizer=None, max_bpe_tokens=100
                 post_sentences.extend(sentence_split(text_chunk))
     else:
         post_sentences = sentence_split(post_text) if isinstance(post_text, str) else []
-    
+
     sentences = pre_sentences + post_sentences
     context_text = segment_sentences(sentences)
-    # 6. context_table
     context_table = sample.get("table")
-    # 7. reasoning
     reasoning = len(sample["qa"].get("steps", [])) > 1
-    # 8. reason_type
     steps = sample["qa"].get("steps", [])
     reason_type = steps[0]["op"] if steps else None
-    # 9. gold_text_id - ConvFinQA specific: use qa.ann_text_rows
     gold_text_id = ["text_" + str(i) for i in sample["qa"].get("ann_text_rows", [])]
-    # 10. gold_table_row
     gold_table_row = sample["qa"].get("ann_table_rows", [])
-    # 11. meta - ConvFinQA specific: keep dialogue_break, turn_ind, etc.
+
     annotation = sample.get("annotation", {})
+    # --- Ensure cur_dial is always a list of dicts with a question key ---
+    cur_dial = annotation.get("cur_dial")
+    if not (isinstance(cur_dial, list) and len(cur_dial) > 0 and isinstance(cur_dial[0], dict)):
+        # Fallback: use the current question as the only turn
+        cur_dial = [{"question": question}]
     meta = {
         "dialogue_break": annotation.get("dialogue_break", []),
         "turn_ind": annotation.get("turn_ind"),
-        "cur_dial": annotation.get("cur_dial"),
+        "cur_dial": cur_dial,
         "cur_program": annotation.get("cur_program"),
         "cur_type": annotation.get("cur_type"),
         "exe_ans_list": annotation.get("exe_ans_list", []),
