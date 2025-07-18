@@ -2,17 +2,21 @@ from dotenv import load_dotenv
 import os
 from openai import OpenAI
 
+openai_api_key = "EMPTY"
+openai_api_base = "http://0.0.0.0:8000/v1"
+
+
 class ChatGPTGenerator:
-    def __init__(self, model_name="gpt-4o-mini"):
+    def __init__(self):
         load_dotenv()
-        api_key = os.getenv("OPENAI_API_KEY")
+        api_key = openai_api_key
         if not api_key:
             raise ValueError("OPENAI_API_KEY is not set in the environment.")
         
-        self.client = OpenAI(api_key=api_key)
-        self.model_name = model_name
+        self.client = OpenAI(api_key=api_key, base_url = openai_api_base)
 
-    def generate(self, question, retrieved_docs, system_prompt=None, max_tokens=500):
+
+    def generate(self, question, retrieved_docs, system_prompt=None, max_tokens=4000):
         context = "\n".join(retrieved_docs)
         messages = []
 
@@ -22,18 +26,19 @@ class ChatGPTGenerator:
         messages.append({"role": "user", "content": f"Question: {question}\nContext:\n{context}\nAnswer:"})
 
         response = self.client.chat.completions.create(
-            model=self.model_name,
+            model="Fin-R1",
             messages=messages,
             max_tokens=max_tokens,
             temperature=0.7,
-            top_p=0.95
+            top_p=0.8,
+            extra_body={"repetition_penalty": 1.05},
         )
 
         return response.choices[0].message.content.strip()
 
 # Example usage
 if __name__ == "__main__":
-    generator = ChatGPTGenerator(model_name="gpt-4o-mini")
+    generator = ChatGPTGenerator()
     
     question = "What was the net income in Q4 2023?"
     retrieved_docs = [
@@ -41,7 +46,12 @@ if __name__ == "__main__":
         "Further details are provided in the financial statements."
     ]
 
-    system_prompt = "You are a precise financial assistant. Base answers strictly on context provided."
+    # Try to read the elaborate prompt from file
+    try:
+        with open("generator_prompt.txt", "r") as f:
+            system_prompt = f.read()
+    except FileNotFoundError:
+        system_prompt = "You are a precise financial assistant. Base answers strictly on context provided."
 
     print("\nGenerating answer...")
     answer = generator.generate(question, retrieved_docs, system_prompt=system_prompt)
