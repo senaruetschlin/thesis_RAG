@@ -28,5 +28,6 @@ answer = generator.generate(
 )
 
 print("Question:", question)
-print("Context (first 2 segments):", context[:2])
+#print("Context:", context)
 print("Generated Answer:", answer) 
+print("Ground Truth:", sample["answer"])
