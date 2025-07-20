@@ -1,96 +1,84 @@
-# prompt_tuning.py
-
 import json
-import os
-from typing import List, Dict
-import openai
+import time
+from src.generator import ChatGPTGenerator
+from src.evaluation import evaluate_rag
 
-# 1) Prepare your OpenAI key (set as env var or here)
-openai.api_key = os.getenv("OPENAI_API_KEY", "sk-...")
+def prompt_tuning(
+    train_path="data_processed/merged_train.json",
+    prompt_path="generator_prompt.txt",
+    num_samples=10,  # Set to None to use all samples
+    metrics=None
+):
+    # Load train set
+    with open(train_path) as f:
+        train_data = json.load(f)
+    if num_samples:
+        train_data = train_data[:num_samples]
 
-# 2) Convert your merged_dataset.json to a JSONL file for fine-tuning
-def prepare_jsonl(
-    merged_json_path: str,
-    jsonl_out_path: str,
-    system_prompt: str,
-) -> None:
-    """
-    Reads your merged_dataset.json and writes a JSONL where each line is:
-      {"prompt": "<system_prompt>\nQ: {question}\nA:", "completion": " {answer}"}
-    """
-    with open(merged_json_path, "r") as f:
-        data = json.load(f)
+    # Load or edit prompt
+    try:
+        with open(prompt_path, "r") as f:
+            system_prompt = f.read()
+    except FileNotFoundError:
+        system_prompt = "You are a precise financial assistant. Base answers strictly on context provided."
+        print(f"Prompt file {prompt_path} not found. Using default prompt.")
 
-    with open(jsonl_out_path, "w") as outf:
-        for sample in data:
-            q = sample["question"].strip()
-            a = sample["answer"].strip()
-            # We add a leading space before completion per OpenAI best practices
-            record = {
-                "prompt": f"{system_prompt}\n\nQ: {q}\nA:",
-                "completion": f" {a}"
-            }
-            outf.write(json.dumps(record) + "\n")
+    print("\nCurrent system prompt:\n", system_prompt)
+    print("\nYou can edit the prompt in", prompt_path, "and rerun this script to try a new prompt.")
 
-    print(f"✅ Wrote {len(data)} examples to {jsonl_out_path}")
+    # Instantiate generator
+    generator = ChatGPTGenerator()
 
+    # Generate predictions and collect latency
+    predictions = []
+    references = []
+    latencies = []
 
-# 3) Upload and fine‑tune
-def fine_tune(jsonl_path: str, base_model="gpt-3.5-turbo", n_epochs=3):
-    # 3a) upload
-    upload_resp = openai.File.create(
-        file=open(jsonl_path, "rb"),
-        purpose="fine-tune"
+    for sample in train_data:
+        question = sample["question"]
+        context = sample["context_text"]
+        true_answer = sample["answer"]
+
+        start = time.time()
+        generated_answer = generator.generate(
+            question=question,
+            retrieved_docs=context,
+            system_prompt=system_prompt
+        )
+        end = time.time()
+        latencies.append(end - start)
+
+        predictions.append({
+            "answer": generated_answer,
+            "contexts": context
+        })
+        references.append({
+            "answer": true_answer,
+            "contexts": context
+        })
+
+    # Default metrics if not provided
+    if metrics is None:
+        metrics = [
+            "context_precision",
+            "context_recall",
+            "faithfulness",
+            "answer_accuracy",
+            "string_presence",
+            "latency"
+        ]
+
+    # Evaluate
+    results = evaluate_rag(
+        predictions,
+        references,
+        metrics,
+        retriever_latency=latencies
     )
-    file_id = upload_resp["id"]
-    print(f"Uploaded training file: {file_id}")
 
-    # 3b) start fine‑tuning
-    ft_resp = openai.FineTune.create(
-        training_file=file_id,
-        model=base_model,
-        n_epochs=n_epochs,
-        batch_size=16,                # tweak as needed
-        learning_rate_multiplier=0.1, # often 0.05–0.2
-    )
-    print("Fine‑tune job started:", ft_resp["id"])
-    return ft_resp["id"]
-
-
-# 4) Poll until done (optional helper)
-def wait_for_finetune(ft_id: str, poll_interval_s=30):
-    import time
-    while True:
-        status = openai.FineTune.retrieve(ft_id)["status"]
-        print("Status:", status)
-        if status in ("succeeded", "failed"):
-            break
-        time.sleep(poll_interval_s)
-    return openai.FineTune.retrieve(ft_id)
-
-
-# 5) Hook back into your generator
-#    After fine‑tune completes, you’ll get `fine_tuned_model` like "ft:gpt-3.5-turbo:…"
-#    Pass that into your ChatGPTGenerator constructor.
+    print("\nEvaluation Results for current prompt:")
+    for k, v in results.items():
+        print(f"{k}: {v}")
 
 if __name__ == "__main__":
-    # a) set paths
-    MERGED = "data_processed/merged_dataset.json"
-    JSONL   = "data_processed/finqa_finetune.jsonl"
-
-    # b) decide your new system prompt
-    SYSTEM_PROMPT = (
-        "You are a highly precise financial assistant.  \n"
-        "Use the provided context (text and tables) to answer the question exactly.\n"
-        "Show your chain of thought only if asked."
-    )
-
-    # c) prepare the file
-    prepare_jsonl(MERGED, JSONL, SYSTEM_PROMPT)
-
-    # d) run fine‑tuning
-    job_id = fine_tune(JSONL, base_model="gpt-3.5-turbo", n_epochs=4)
-
-    # e) optionally wait until done
-    result = wait_for_finetune(job_id)
-    print("🎉 Fine‑tune job result:", result)
+    prompt_tuning()
