@@ -1,101 +1,103 @@
-import time
-from typing import List, Dict, Any
+import asyncio
+from typing import List, Dict, Any, Optional
 
-from ragas.metrics import (
-    context_precision,
-    context_recall,
-    faithfulness,
-    answer_accuracy,
-    string_presence,
-    nvidia_entity_recall,  # ← example real import
-)
-from ragas import set_llm
-from ragas.llms import OpenAI, Vllm
+from ragas import EvaluationDataset, evaluate
+import os
+from dotenv import load_dotenv
 
-# Map metric names to functions
-RAGAS_METRICS = {
-    "context_precision": context_precision,
-    "context_recall": context_recall,
-    "faithfulness": faithfulness,
-    "answer_accuracy": answer_accuracy,
-    "string_presence": string_presence,
-    "nvidia_entity_recall": nvidia_entity_recall,
-}
+async def evaluate_ragas_dataset(
+    dataset: List[Dict[str, Any]],
+    metrics_list: Optional[List[str]] = None,
+    llm_model: str = "gpt-4o",
+    llm_type: str = "openai",  # 'openai' or 'vllm'
+    vllm_base_url: str = "http://localhost:8000/v1"
+):
+    """
+    Evaluate a dataset using RAGAS with the new API.
 
-def evaluate_rag(
-    predictions: List[Dict[str, Any]],
-    references: List[Dict[str, Any]],
-    metrics: List[str],
-    retriever_latency: List[float] = None,
-    retriever_cost: List[float] = None,
-    llm: Any = None,
-) -> Dict[str, Any]:
-    if llm is not None:
-        set_llm(llm)
-        print(f"[RAGAS] Using LLM: {llm}")
+    Args:
+        dataset: List of dicts with keys: user_input, retrieved_contexts, response, reference
+        metrics_list: List of metric names to compute (see available_metrics below). If None, all are used.
+        llm_model: Model name (e.g., 'gpt-4o', 'gpt-3.5-turbo', 'Fin-R1')
+        llm_type: 'openai' (default) or 'vllm'
+        vllm_base_url: Base URL for vllm server (if using vllm)
+    Returns:
+        Dictionary of metric results
+    """
+    # Metric mapping
+    from ragas.metrics import (
+        LLMContextPrecisionWithReference,
+        NonLLMContextPrecisionWithReference,
+        LLMContextRecall,
+        NonLLMContextRecall,
+        ContextEntityRecall,
+        FaithfulnesswithHHEM,
+        AnswerAccuracy,
+        StringPresence,
+    )
+    available_metrics = {
+        "context_precision_llm": LLMContextPrecisionWithReference,
+        "context_precision_nonllm": NonLLMContextPrecisionWithReference,
+        "context_recall_llm": LLMContextRecall,
+        "context_recall_nonllm": NonLLMContextRecall,
+        "context_entity_recall": ContextEntityRecall,
+        "faithfulness": FaithfulnesswithHHEM,
+        "answer_accuracy": AnswerAccuracy,
+        "string_presence": StringPresence,
+    }
+    # If no metrics_list, use all
+    if metrics_list is None:
+        metrics_list = list(available_metrics.keys())
+    # Instantiate metrics
+    metrics = [available_metrics[name]() for name in metrics_list if name in available_metrics]
+    if not metrics:
+        raise ValueError("No valid metrics selected.")
+
+    load_dotenv()
+    if llm_type == "openai":
+        from langchain_openai import ChatOpenAI
+        from ragas.llms import LangchainLLMWrapper
+        OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+        if not OPENAI_API_KEY:
+            raise ValueError("OPENAI_API_KEY not found in .env file.")
+        llm = ChatOpenAI(model=llm_model, api_key=OPENAI_API_KEY)
+        evaluator_llm = LangchainLLMWrapper(llm)
+    elif llm_type == "vllm":
+        from langchain_community.llms import VLLMOpenAI
+        from ragas.llms import LangchainLLMWrapper
+        llm = VLLMOpenAI(model=llm_model, base_url=vllm_base_url)
+        evaluator_llm = LangchainLLMWrapper(llm)
     else:
-        print("[RAGAS] Using default LLM")
+        raise ValueError(f"Unknown llm_type: {llm_type}")
 
-    results: Dict[str, Any] = {}
-
-    # Compute RAGAS metrics
-    for name in metrics:
-        if name in RAGAS_METRICS:
-            func = RAGAS_METRICS[name]
-            try:
-                results[name] = func(predictions, references)
-            except Exception as e:
-                results[name] = f"Error: {e}"
-        elif name == "latency":
-            if retriever_latency:
-                results["latency_mean"] = sum(retriever_latency) / len(retriever_latency)
-                results["latency_max"] = max(retriever_latency)
-                results["latency_min"] = min(retriever_latency)
-            else:
-                results.update(latency_mean=None, latency_max=None, latency_min=None)
-        elif name == "cost":
-            if retriever_cost:
-                results["cost_total"] = sum(retriever_cost)
-                results["cost_mean"] = sum(retriever_cost) / len(retriever_cost)
-            else:
-                results.update(cost_total=None, cost_mean=None)
-        else:
-            raise ValueError(f"Unknown metric: {name}")
-
-    return results
+    evaluation_dataset = EvaluationDataset.from_list(dataset)
+    return evaluate(
+        dataset=evaluation_dataset,
+        metrics=metrics,
+        llm=evaluator_llm
+    )
 
 # Example usage
 if __name__ == "__main__":
-    # Dummy data for demonstration
-    predictions = [
-        {"answer": "42", "contexts": ["The answer is 42."]},
-        {"answer": "blue", "contexts": ["The sky is blue."]},
+    import asyncio
+    # Example dataset
+    dataset = [
+        {
+            "user_input": "Who introduced the theory of relativity?",
+            "retrieved_contexts": ["Albert Einstein proposed the theory of relativity, which transformed our understanding of time, space, and gravity."],
+            "response": "Albert Einstein proposed the theory of relativity, which transformed our understanding of time, space, and gravity.",
+            "reference": "Albert Einstein proposed the theory of relativity, which transformed our understanding of time, space, and gravity."
+        },
+        {
+            "user_input": "Who was the first computer programmer?",
+            "retrieved_contexts": ["Ada Lovelace is regarded as the first computer programmer for her work on Charles Babbage's early mechanical computer, the Analytical Engine."],
+            "response": "Ada Lovelace is regarded as the first computer programmer for her work on Charles Babbage's early mechanical computer, the Analytical Engine.",
+            "reference": "Ada Lovelace is regarded as the first computer programmer for her work on Charles Babbage's early mechanical computer, the Analytical Engine."
+        }
     ]
-    references = [
-        {"answer": "42", "contexts": ["The answer is 42."]},
-        {"answer": "blue", "contexts": ["The sky is blue."]},
-    ]
-    metrics = [
-        "context_precision",
-        "context_recall",
-        "faithfulness",
-        "answer_accuracy",
-        "string_presence",
-        "nvidia_metrics",
-        "latency",
-        "cost",
-    ]
-    retriever_latency = [0.12, 0.15]
-    retriever_cost = [0.01, 0.01]
-
-    # Example: Use OpenAI GPT-3.5 for evaluation
-    openai_llm = OpenAI(model="gpt-3.5-turbo", api_key="sk-...your-key...")
-    results = evaluate_rag(predictions, references, metrics, retriever_latency, retriever_cost, llm=openai_llm)
-    for k, v in results.items():
-        print(f"{k}: {v}")
-
-    # Example: Use local vllm for evaluation (uncomment to use)
-    # vllm_llm = Vllm(base_url="http://localhost:8000/v1", model="Fin-R1")
-    # results = evaluate_rag(predictions, references, metrics, retriever_latency, retriever_cost, llm=vllm_llm)
-    # for k, v in results.items():
-    #     print(f"{k}: {v}") 
+    # Use all metrics by default
+    results = asyncio.run(evaluate_ragas_dataset(dataset))
+    print(results)
+    # Or select specific metrics
+    results2 = asyncio.run(evaluate_ragas_dataset(dataset, metrics_list=["context_precision_llm", "faithfulness"]))
+    print(results2) 

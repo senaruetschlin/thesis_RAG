@@ -1,28 +1,35 @@
 import json
 import time
+import asyncio
 from src.generator import ChatGPTGenerator
-from src.evaluation import evaluate_rag
+from src.evaluation import evaluate_ragas_dataset
 
-def prompt_tuning(
-    train_path="data_processed/merged_train.json",
-    prompt_path="generator_prompt.txt",
-    num_samples=10,  # Set to None to use all samples
-    metrics=None
-):
-    # Load train set
+def load_train_data(train_path, num_samples=None):
     with open(train_path) as f:
         train_data = json.load(f)
     if num_samples:
         train_data = train_data[:num_samples]
+    return train_data
 
-    # Load or edit prompt
+def load_prompt(prompt_path):
     try:
         with open(prompt_path, "r") as f:
-            system_prompt = f.read()
+            return f.read()
     except FileNotFoundError:
-        system_prompt = "You are a precise financial assistant. Base answers strictly on context provided."
+        default = "You are a precise financial assistant. Base answers strictly on context provided."
         print(f"Prompt file {prompt_path} not found. Using default prompt.")
+        return default
 
+async def prompt_tuning(
+    train_path="/Users/christel/Desktop/Thesis/thesis_repo/data/data_processed/Train_Val_Test/df_test.json",
+    prompt_path="/Users/christel/Desktop/Thesis/thesis_repo/src/generator_prompt.txt",
+    num_samples=20
+):
+    # Load train set
+    train_data = load_train_data(train_path, num_samples)
+
+    # Load or edit prompt
+    system_prompt = load_prompt(prompt_path)
     print("\nCurrent system prompt:\n", system_prompt)
     print("\nYou can edit the prompt in", prompt_path, "and rerun this script to try a new prompt.")
 
@@ -30,10 +37,7 @@ def prompt_tuning(
     generator = ChatGPTGenerator()
 
     # Generate predictions and collect latency
-    predictions = []
-    references = []
-    latencies = []
-
+    dataset = []
     for sample in train_data:
         question = sample["question"]
         context = sample["context_text"]
@@ -46,39 +50,30 @@ def prompt_tuning(
             system_prompt=system_prompt
         )
         end = time.time()
-        latencies.append(end - start)
 
-        predictions.append({
-            "answer": generated_answer,
-            "contexts": context
-        })
-        references.append({
-            "answer": true_answer,
-            "contexts": context
+        dataset.append({
+            "user_input": question,
+            "retrieved_contexts": context,
+            "response": generated_answer,
+            "reference": true_answer
         })
 
-    # Default metrics if not provided
-    if metrics is None:
-        metrics = [
-            "context_precision",
-            "context_recall",
-            "faithfulness",
-            "answer_accuracy",
-            "string_presence",
-            "latency"
-        ]
+    # Only apply the specified metrics
+    metrics_list = ["answer_accuracy", "string_presence"]
 
-    # Evaluate
-    results = evaluate_rag(
-        predictions,
-        references,
-        metrics,
-        retriever_latency=latencies
-    )
+    # Evaluate using the new evaluation function (now async)
+    results = await evaluate_ragas_dataset(dataset, metrics_list=metrics_list)
 
     print("\nEvaluation Results for current prompt:")
-    for k, v in results.items():
-        print(f"{k}: {v}")
+    print(results)
+    print("\nSample-wise details:")
+
+    for i, sample in enumerate(dataset):
+        print(f"Sample {i+1}:")
+        print(f"  Question: {sample['user_input']}")
+        print(f"  Response: {sample['response']}")
+        print(f"  True Answer: {sample['reference']}")
+        print("-" * 40)
 
 if __name__ == "__main__":
-    prompt_tuning()
+    asyncio.run(prompt_tuning())

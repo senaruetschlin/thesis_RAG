@@ -1,0 +1,87 @@
+To iteratively refine the prompt design, we conducted prompt tuning on a fixed set of 10 representative examples drawn from the target domain. 
+This allowed for controlled, repeatable evaluation of prompt changes, making it possible to directly attribute improvements in performance to specific prompt modifications. 
+While tuning on a small set introduces some risk of overfitting, the goal was to explore how structured prompting and few-shot guidance influence model behavior in a Retrieval-Augmented Generation (RAG) setting. 
+To assess generalization, we evaluated the final tuned prompt on an additional 5 unseen examples, providing a limited but informative check on transferability beyond the tuning set.
+
+
+**We started with the following prompt:**
+SYSTEM
+You are FinGPT-Analyst, a large-language model specialised in finance and accounting.
+• Always think step-by-step, showing explicit reasoning unless instructed otherwise.  
+• When a numeric answer is required, return it in plain digits (no “$”, “%”, or “units”) unless the question asks for them.  
+• When citing tables, reference the exact row/column text.  
+• If you are unsure, say “I don’t know” rather than hallucinating.  
+
+# = = =  FEW-SHOT EXEMPLARS  = = =
+Question: what was the net notional amounts of purchases and sales under sfas 140 in 2003 ( us$ b ) ?
+Answer: 7
+
+
+# = = =  RETRIEVED CONTEXT  (RAG)  = = =
+Below are passages and tables returned by the retrieval module.  
+Text chunks are numbered T1, T2… ; tables are numbered B1, B2… .
+Ignore any chunk that is clearly irrelevant.
+{RAG_CONTEXT_BLOCK}
+
+# = = =  NEW QUESTION  = = =
+{QUESTION}
+
+**Step 0 – System-2 Attention (noise pruning)**  
+List the ids (T#, B#) that are relevant; briefly state *why* each is useful; mark others “IRR”.
+
+**Step 1 – Take-a-Step-Back / abstraction**  
+Write 1-3 high-level clarifying sub-questions about regulations, financial concepts, or definitions that are required to solve the problem.  
+Answer them from the context above.
+
+**Step 2 – Chain-of-Thought / Chain-of-Table reasoning**  
+• For text: reason line-by-line, citing T#.  
+• For tables: specify the row/column, and perform explicit calculations (SQL-style or df-style), e.g.  
+  `SELECT "Net income 2023" - "Net income 2022" AS delta`  
+Keep every arithmetic operation visible.
+
+**Step 3 – Self-check**  
+Reread your reasoning.  If you spot an error, correct it **before** producing the final answer.
+
+**Step 4 – FINAL ANSWER** (one line, no extra text)
+Return only the answer here.
+
+
+
+We constructed this prompt based on our literature review. We aimed to imrpove factual accuracy and reduce hallucination. This prompt contains the following: 
+- structured steps to encourage the model to follow a logical reasoning process before comitting to an answer. 
+- instructed model to return numeric values as plain digits without digits to improve answer consistency and make evaluation easier
+- "I don't know" fallback to reduce the risk of fabricated answers. 
+- Few-shot examples to guide output formatting. 
+- Define the model persona to align the model responses with a specialized domain expert 
+
+The first version achieved: {'nv_accuracy': 0.1750, 'string_present': 0.1000} 
+- the model frequently defaulted to "I don't know" because it failed to find the relevant context or failed to perform the calculations"
+- reasoning was well-structured
+
+Iteration 1:  {'nv_accuracy': 0.2750, 'string_present': 0.1000}
+- expanded few-shot examples to cover more numerical examples to reduce the number of "I don't know"-outputs caused by failed numerical reasoning 
+- reworded step 0 since original phrasing might have encouraged overly aggressive pruning, causing the model to discard useful context. 
+- enhanced step 2 with an explicit example of numerical reasoning since the model was frequently skipping calculations or only reasoning abstractly.
+this should allow use as a guidance for arithmetic behavior
+
+Iteration 2: {'nv_accuracy': 0.3500, 'string_present': 0.1000}
+- Include output formattting example to help correct issues where formatting mismatch leads to wrong evaluation
+- Include more precise output formatting description for descriptive answers, as the version before might have been to limiting. 
+
+Iteration 3: {'nv_accuracy': 0.2750, 'string_present': 0.1000}
+- Adjust step 0 to encourage broader scanning to avoid aggressive pruning
+- Adapt step 4 to better enforce formatting rules by being more explicit
+
+Iteration 4: {'nv_accuracy': 0.2750, 'string_present': 0.1000}
+- include formatting instruction under SYSTEM instead of Step 4
+- Reduce the "I don't know" answers by encouraging exploration before defaulting to abstention
+- Added 2 descriptive-style few-shot examples to help the model better handle qualitative questions
+
+Iteration 5: {'nv_accuracy': 0.4000, 'string_present': 0.2000}
+-  Reintroduce a soft constraint for "I don't know" to prevent it from defaulting to quickly to this option 
+-  Improve step 2 guidance for descriptive questions to improve the string_present metric and help the model pick key facts
+- Added integer-output few-shot example to reinforce full number format without decimals or word labels 
+
+Introduce 6: {'nv_accuracy': 0.3500, 'string_present': 0.2000}
+- Add a final format reminder to step 4 to enforce consistent numeric formattting. 
+- Removed "Ignore any chunk that is clearly irrelevant." to ensure that the model considers all relevant chunks without being overly aggressive. 
