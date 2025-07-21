@@ -471,3 +471,87 @@ def preprocess_finder_sample(sample, tokenizer=None, max_bpe_tokens=100):
 
 def preprocess_finder_dataset(finder_data, tokenizer=None, max_bpe_tokens=100):
     return [preprocess_finder_sample(sample, tokenizer, max_bpe_tokens) for sample in finder_data]
+
+
+
+#______NEW FUNCTIONS____________________________________________________________________________________________
+def transform_finqa_dataset(finqa_data):
+    """
+    Transforms FinQA dataset into the specified format, correctly
+    accessing the nested 'program' key for the 'operation' field.
+
+    Args:
+        finqa_data (list of dict): The original FinQA data.
+
+    Returns:
+        list of dict: Transformed data.
+    """
+    transformed = []
+    for sample in finqa_data:
+        # Compose context: pre_text + table + post_text
+        pre_text = sample.get("pre_text", "")
+        table = sample.get("table", "")
+        post_text = sample.get("post_text", "")
+        
+        if isinstance(table, list):
+            table_str = "\n".join(["\t".join(map(str, row)) for row in table])
+        else:
+            table_str = str(table)
+        context = f"{pre_text}\n{table_str}\n{post_text}".strip()
+
+        # Access nested keys within the 'qa' dictionary
+        qa_dict = sample.get("qa", {})
+
+        transformed.append({
+            "ID": sample.get("filename", ""),
+            "question": qa_dict.get("question", ""),
+            "answer": qa_dict.get("answer", ""),
+            "context": context,
+            "gold_context": qa_dict.get("gold_inds", []),
+            # This is the corrected line
+            "operation": qa_dict.get("program", "")
+        })
+    return transformed
+
+
+
+def transform_convfinqa_dataset(convfinqa_data):
+    """
+    Transforms FinQA dataset into the specified format, correctly
+    accessing the nested 'program' key for the 'operation' field.
+
+    Args:
+        finqa_data (list of dict): The original FinQA data.
+
+    Returns:
+        list of dict: Transformed data.
+    """
+    transformed = []
+    for sample in convfinqa_data:
+        # Compose context: pre_text + table + post_text
+        pre_text = sample.get("pre_text", "")
+        table = sample.get("table", "")
+        post_text = sample.get("post_text", "")
+        
+        if isinstance(table, list):
+            table_str = "\n".join(["\t".join(map(str, row)) for row in table])
+        else:
+            table_str = str(table)
+        context = f"{pre_text}\n{table_str}\n{post_text}".strip()
+
+        # Access nested keys within the 'qa' dictionary
+        qa_dict = sample.get("qa", {})
+        ann_dict = sample.get("annotation", {})
+
+        transformed.append({
+            "ID": sample.get("filename", ""),
+            "question": qa_dict.get("question", ""),
+            "answer": qa_dict.get("answer", ""),
+            "context": context,
+            "gold_context": qa_dict.get("gold_inds", []),
+            # This is the corrected line
+            "operation": qa_dict.get("program", ""),
+            # Add turn_ind from annotation
+            "turn_ind": ann_dict.get("turn_ind", "")
+            })
+    return transformed

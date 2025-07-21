@@ -1,8 +1,11 @@
 To iteratively refine the prompt design, we conducted prompt tuning on a fixed set of 10 representative examples drawn from the target domain. 
 This allowed for controlled, repeatable evaluation of prompt changes, making it possible to directly attribute improvements in performance to specific prompt modifications. 
-While tuning on a small set introduces some risk of overfitting, the goal was to explore how structured prompting and few-shot guidance influence model behavior in a Retrieval-Augmented Generation (RAG) setting. 
-To assess generalization, we evaluated the final tuned prompt on an additional 5 unseen examples, providing a limited but informative check on transferability beyond the tuning set.
+While tuning on a small set introduces some risk of overfitting, the goal was to explore how structured prompting and few-shot guidance influence model behavior in a Retrieval-Augmented Generation (RAG) setting.
 
+To assess generalization, we evaluated the final tuned prompt on an additional 10 unseen examples, providing a limited but informative check on transferability beyond the tuning set.
+
+Finally, to isolate the effect of the prompt from retrieval quality, we conducted a ceiling performance test in which the model was given the most relevant context passages. 
+This evaluation simulates an ideal retrieval scenario and helps determine whether remaining performance limitations are due to prompt structure, reasoning guidance, or model capabilities, rather than retrieval errors.
 
 **We started with the following prompt:**
 SYSTEM
@@ -85,3 +88,6 @@ Iteration 5: {'nv_accuracy': 0.4000, 'string_present': 0.2000}
 Introduce 6: {'nv_accuracy': 0.3500, 'string_present': 0.2000}
 - Add a final format reminder to step 4 to enforce consistent numeric formattting. 
 - Removed "Ignore any chunk that is clearly irrelevant." to ensure that the model considers all relevant chunks without being overly aggressive. 
+
+After inspecting the performance of the retriever with the best context. We decided to switch the model from 4o to 3o as it still defaulted to quickly to "I don't know"-answers and 
+
