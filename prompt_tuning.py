@@ -40,7 +40,7 @@ async def prompt_tuning(
     dataset = []
     for sample in train_data:
         question = sample["question"]
-        context = sample["context_text"]
+        context = sample["context"]
         true_answer = sample["answer"]
 
         start = time.time()
@@ -55,7 +55,7 @@ async def prompt_tuning(
             "user_input": question,
             "retrieved_contexts": context,
             "response": generated_answer,
-            "reference": true_answer
+            "answer": true_answer
         })
 
     # Only apply the specified metrics
@@ -72,7 +72,7 @@ async def prompt_tuning(
         print(f"Sample {i+1}:")
         print(f"  Question: {sample['user_input']}")
         print(f"  Response: {sample['response']}")
-        print(f"  True Answer: {sample['reference']}")
+        print(f"  True Answer: {sample['answer']}")
         print("-" * 40)
 
 if __name__ == "__main__":
