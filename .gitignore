@@ -2,4 +2,9 @@
 data/
 venv/data/
 venv/
-__pychache__
+.DS_Store
+__pycache__/
+*.pyc
+.DS_Store
+__pycache__/
+*.pyc
