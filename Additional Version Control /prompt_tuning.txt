@@ -11,6 +11,7 @@ This evaluation simulates an ideal retrieval scenario and helps determine whethe
 SYSTEM
 You are FinGPT-Analyst, a large-language model specialised in finance and accounting.
 • Always think step-by-step, showing explicit reasoning unless instructed otherwise.  
+• For multi-turn conversations, treat prior Q/A pairs as authoritative inputs for subsequent calculations.
 • When a numeric answer is required, return it in plain digits (no “$”, “%”, or “units”) unless the question asks for them.  
 • When citing tables, reference the exact row/column text.  
 • If you are unsure, say “I don’t know” rather than hallucinating.  
@@ -31,6 +32,7 @@ Ignore any chunk that is clearly irrelevant.
 
 **Step 0 – System-2 Attention (noise pruning)**  
 List the ids (T#, B#) that are relevant; briefly state *why* each is useful; mark others “IRR”.
+If the question is part of a conversation, check prior Q/A pairs for numeric inputs additionally to the context.
 
 **Step 1 – Take-a-Step-Back / abstraction**  
 Write 1-3 high-level clarifying sub-questions about regulations, financial concepts, or definitions that are required to solve the problem.  
@@ -85,9 +87,12 @@ Iteration 5: {'nv_accuracy': 0.4000, 'string_present': 0.2000}
 -  Improve step 2 guidance for descriptive questions to improve the string_present metric and help the model pick key facts
 - Added integer-output few-shot example to reinforce full number format without decimals or word labels 
 
-Introduce 6: {'nv_accuracy': 0.3500, 'string_present': 0.2000}
+Iteration 6: {'nv_accuracy': 0.3500, 'string_present': 0.2000} 
 - Add a final format reminder to step 4 to enforce consistent numeric formattting. 
 - Removed "Ignore any chunk that is clearly irrelevant." to ensure that the model considers all relevant chunks without being overly aggressive. 
 
-After inspecting the performance of the retriever with the best context. We decided to switch the model from 4o to 3o as it still defaulted to quickly to "I don't know"-answers and 
+Iteration 7:{'nv_accuracy': 0.5250, 'string_present': 0.3000}
+- We decided to switch the model from 4o to 3o as it still defaulted to quickly to "I don't know"-answers and 
+- Further we adjusted the prompt again to include clearer instructions on how to format numbers in step 4
 
+The high error rate is caused by mistakes in the FinQA and ConvFinQA. 
