@@ -40,7 +40,14 @@ async def prompt_tuning(
     dataset = []
     for sample in train_data:
         question = sample["question"]
-        context = sample["context"]
+        raw_context = sample["context"]
+
+        # Safely parse context
+        try:
+            context = json.loads(raw_context) if isinstance(raw_context, str) else raw_context
+        except json.JSONDecodeError:
+            context = [raw_context] if isinstance(raw_context, str) else raw_context
+
         true_answer = sample["answer"]
 
         start = time.time()
@@ -55,7 +62,7 @@ async def prompt_tuning(
             "user_input": question,
             "retrieved_contexts": context,
             "response": generated_answer,
-            "answer": true_answer
+            "reference": true_answer
         })
 
     # Only apply the specified metrics
@@ -72,7 +79,7 @@ async def prompt_tuning(
         print(f"Sample {i+1}:")
         print(f"  Question: {sample['user_input']}")
         print(f"  Response: {sample['response']}")
-        print(f"  True Answer: {sample['answer']}")
+        print(f"  True Answer: {sample['reference']}")
         print("-" * 40)
 
 if __name__ == "__main__":
