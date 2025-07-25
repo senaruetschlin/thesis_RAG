@@ -1,0 +1,1091 @@
+2025-07-25 14:21:56,939 Skipping existing chunk: row_97_chunk_0
+2025-07-25 14:21:56,972 Processing chunk: row_97_chunk_1
+2025-07-25 14:21:57,705 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:22:17,764 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:22:19,240 Processing chunk: row_97_chunk_2
+2025-07-25 14:22:19,944 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:22:29,402 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:22:29,786 Processing chunk: row_97_chunk_3
+2025-07-25 14:22:30,065 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:22:38,368 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:22:38,807 Processing chunk: row_97_chunk_4
+2025-07-25 14:22:39,383 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:22:51,040 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:22:51,516 Processing chunk: row_97_chunk_5
+2025-07-25 14:22:51,872 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:22:58,021 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:22:58,302 Processing chunk: row_98_chunk_0
+2025-07-25 14:22:59,535 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:23:09,726 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:23:10,024 Processing chunk: row_98_chunk_1
+2025-07-25 14:23:10,390 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:23:18,991 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:23:19,329 Processing chunk: row_98_chunk_2
+2025-07-25 14:23:19,605 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:23:27,916 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:23:28,191 Processing chunk: row_98_chunk_3
+2025-07-25 14:23:28,514 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:23:34,862 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:23:35,138 Processing chunk: row_98_chunk_4
+2025-07-25 14:23:35,384 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:23:40,193 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:23:40,432 Processing chunk: row_99_chunk_0
+2025-07-25 14:23:40,796 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:23:49,688 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:23:49,931 Processing chunk: row_100_chunk_0
+2025-07-25 14:23:50,192 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:24:05,398 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:24:05,748 Processing chunk: row_101_chunk_0
+2025-07-25 14:24:05,993 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:24:19,920 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:24:20,277 Processing chunk: row_102_chunk_0
+2025-07-25 14:24:20,494 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:24:24,432 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:24:24,688 Processing chunk: row_103_chunk_0
+2025-07-25 14:24:25,403 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:24:42,044 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:24:42,323 Processing chunk: row_104_chunk_0
+2025-07-25 14:24:42,756 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:24:48,795 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:24:49,055 Processing chunk: row_105_chunk_0
+2025-07-25 14:24:49,552 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:25:05,311 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:25:05,592 Processing chunk: row_106_chunk_0
+2025-07-25 14:25:05,880 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:25:15,852 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:25:16,075 Processing chunk: row_107_chunk_0
+2025-07-25 14:25:16,319 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:25:22,998 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:25:23,282 Processing chunk: row_108_chunk_0
+2025-07-25 14:25:23,716 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:25:35,494 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:25:35,860 Processing chunk: row_109_chunk_0
+2025-07-25 14:25:36,100 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:25:51,203 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:25:51,446 Processing chunk: row_110_chunk_0
+2025-07-25 14:25:51,715 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:25:58,024 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:25:58,262 Processing chunk: row_111_chunk_0
+2025-07-25 14:25:58,532 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:26:16,044 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:26:16,812 Processing chunk: row_112_chunk_0
+2025-07-25 14:26:17,110 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:26:31,346 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:26:31,701 Processing chunk: row_113_chunk_0
+2025-07-25 14:26:31,944 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:26:41,645 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:26:41,769 Failed processing chunk row_113_chunk_0: {code: Neo.ClientError.Procedure.ProcedureCallFailed} {message: Failed to invoke procedure `apoc.create.addLabels`: Caused by: IndexEntryConflictException{propertyValues=( String("Annual_Report") ), addedEntityId=-1, existingEntityId=1404}}
+2025-07-25 14:26:41,805 Processing chunk: row_114_chunk_0
+2025-07-25 14:26:42,260 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:26:50,993 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:26:51,224 Processing chunk: row_115_chunk_0
+2025-07-25 14:26:51,576 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:27:09,805 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:27:10,112 Processing chunk: row_116_chunk_0
+2025-07-25 14:27:10,521 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:27:26,497 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:27:26,831 Processing chunk: row_117_chunk_0
+2025-07-25 14:27:27,212 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:27:41,734 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:27:42,786 Processing chunk: row_118_chunk_0
+2025-07-25 14:27:43,030 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:27:56,484 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:27:56,722 Processing chunk: row_119_chunk_0
+2025-07-25 14:27:56,976 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:28:50,961 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:28:51,285 Processing chunk: row_120_chunk_0
+2025-07-25 14:28:51,528 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:28:57,586 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:28:57,881 Processing chunk: row_121_chunk_0
+2025-07-25 14:28:58,636 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:29:02,323 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:29:02,590 Processing chunk: row_122_chunk_0
+2025-07-25 14:29:02,783 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:29:16,868 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:29:17,110 Processing chunk: row_123_chunk_0
+2025-07-25 14:29:17,352 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:29:26,610 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:29:26,898 Processing chunk: row_124_chunk_0
+2025-07-25 14:29:27,206 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:29:29,492 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:29:29,682 Processing chunk: row_124_chunk_1
+2025-07-25 14:29:29,976 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:29:42,709 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:29:43,107 Processing chunk: row_124_chunk_2
+2025-07-25 14:29:43,431 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:29:47,203 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:29:47,404 Processing chunk: row_124_chunk_3
+2025-07-25 14:29:49,734 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:29:56,407 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:29:56,627 Processing chunk: row_125_chunk_0
+2025-07-25 14:29:56,844 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:30:06,119 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:30:06,398 Processing chunk: row_126_chunk_0
+2025-07-25 14:30:06,664 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:30:12,775 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:30:13,034 Processing chunk: row_127_chunk_0
+2025-07-25 14:30:13,284 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:30:17,278 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:30:17,527 Processing chunk: row_128_chunk_0
+2025-07-25 14:30:17,758 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:30:29,417 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:30:29,707 Processing chunk: row_129_chunk_0
+2025-07-25 14:30:29,979 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:30:34,112 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:30:34,350 Processing chunk: row_129_chunk_1
+2025-07-25 14:30:34,547 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:30:45,016 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:30:45,265 Processing chunk: row_130_chunk_0
+2025-07-25 14:30:45,494 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:31:03,686 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:31:04,129 Processing chunk: row_131_chunk_0
+2025-07-25 14:31:04,446 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:31:39,511 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:31:39,892 Processing chunk: row_132_chunk_0
+2025-07-25 14:31:40,133 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:31:48,933 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:31:49,164 Processing chunk: row_133_chunk_0
+2025-07-25 14:31:49,402 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:31:56,348 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:31:56,627 Processing chunk: row_133_chunk_1
+2025-07-25 14:31:57,324 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:32:04,506 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:32:04,770 Processing chunk: row_134_chunk_0
+2025-07-25 14:32:05,073 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:32:12,788 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:32:12,981 Processing chunk: row_135_chunk_0
+2025-07-25 14:32:13,224 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:32:20,799 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:32:20,951 Processing chunk: row_136_chunk_0
+2025-07-25 14:32:21,254 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:32:57,195 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:32:57,432 Processing chunk: row_137_chunk_0
+2025-07-25 14:32:57,676 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:32:59,113 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:32:59,292 Processing chunk: row_138_chunk_0
+2025-07-25 14:32:59,686 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:33:10,180 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:33:10,398 Processing chunk: row_139_chunk_0
+2025-07-25 14:33:10,661 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:33:21,600 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:33:21,827 Processing chunk: row_140_chunk_0
+2025-07-25 14:33:22,726 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:33:31,165 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:33:31,523 Processing chunk: row_141_chunk_0
+2025-07-25 14:33:31,788 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:33:49,863 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:33:50,187 Processing chunk: row_142_chunk_0
+2025-07-25 14:33:50,480 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:33:51,167 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:33:51,357 Processing chunk: row_143_chunk_0
+2025-07-25 14:33:51,573 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:34:00,003 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:34:00,185 Processing chunk: row_144_chunk_0
+2025-07-25 14:34:00,414 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:34:06,551 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:34:06,716 Processing chunk: row_145_chunk_0
+2025-07-25 14:34:06,978 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:34:14,540 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:34:14,796 Processing chunk: row_146_chunk_0
+2025-07-25 14:34:15,034 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:34:24,688 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:34:24,960 Processing chunk: row_147_chunk_0
+2025-07-25 14:34:25,275 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:34:46,031 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:34:46,315 Processing chunk: row_148_chunk_0
+2025-07-25 14:34:46,695 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:34:55,213 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:34:55,385 Processing chunk: row_148_chunk_1
+2025-07-25 14:34:55,608 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:35:04,052 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:35:04,297 Processing chunk: row_149_chunk_0
+2025-07-25 14:35:04,615 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:35:12,292 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:35:12,489 Processing chunk: row_150_chunk_0
+2025-07-25 14:35:12,792 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:35:32,468 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:35:32,775 Processing chunk: row_151_chunk_0
+2025-07-25 14:35:33,186 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:35:43,526 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:35:43,805 Processing chunk: row_152_chunk_0
+2025-07-25 14:35:44,072 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:36:13,630 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:36:13,978 Processing chunk: row_153_chunk_0
+2025-07-25 14:36:14,240 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:36:22,346 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:36:22,540 Processing chunk: row_154_chunk_0
+2025-07-25 14:36:22,799 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:37:06,232 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:37:07,146 Processing chunk: row_155_chunk_0
+2025-07-25 14:37:07,415 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:37:26,761 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:37:26,973 Processing chunk: row_156_chunk_0
+2025-07-25 14:37:27,360 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:37:28,889 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:37:29,111 Processing chunk: row_157_chunk_0
+2025-07-25 14:37:29,293 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:37:34,457 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:37:34,688 Processing chunk: row_158_chunk_0
+2025-07-25 14:37:34,925 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:37:56,135 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:37:56,428 Processing chunk: row_158_chunk_1
+2025-07-25 14:37:56,679 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:38:03,814 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:38:04,090 Processing chunk: row_158_chunk_2
+2025-07-25 14:38:04,309 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:38:13,004 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:38:13,244 Processing chunk: row_158_chunk_3
+2025-07-25 14:38:13,484 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:38:19,742 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:38:19,917 Processing chunk: row_158_chunk_4
+2025-07-25 14:38:20,149 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:38:27,087 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:38:27,314 Processing chunk: row_159_chunk_0
+2025-07-25 14:38:27,537 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:38:40,457 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:38:40,683 Processing chunk: row_159_chunk_1
+2025-07-25 14:38:41,295 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:38:47,444 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:38:47,626 Processing chunk: row_159_chunk_2
+2025-07-25 14:38:47,873 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:38:58,600 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:38:58,802 Processing chunk: row_160_chunk_0
+2025-07-25 14:38:59,015 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:39:06,487 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:39:06,670 Processing chunk: row_161_chunk_0
+2025-07-25 14:39:06,956 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:39:15,452 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:39:15,685 Processing chunk: row_162_chunk_0
+2025-07-25 14:39:15,942 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:39:36,284 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:39:36,618 Created a chunk of size 1754, which is longer than the specified 1500
+2025-07-25 14:39:36,662 Processing chunk: row_163_chunk_0
+2025-07-25 14:39:36,948 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:39:40,548 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:39:40,762 Processing chunk: row_163_chunk_1
+2025-07-25 14:39:40,953 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:39:56,434 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:39:56,884 Processing chunk: row_163_chunk_2
+2025-07-25 14:39:57,120 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:40:09,083 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:40:09,299 Created a chunk of size 4701, which is longer than the specified 1500
+2025-07-25 14:40:09,332 Processing chunk: row_164_chunk_0
+2025-07-25 14:40:09,667 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:40:15,813 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:40:16,104 Processing chunk: row_164_chunk_1
+2025-07-25 14:40:16,370 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:40:21,615 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:40:21,853 Processing chunk: row_164_chunk_2
+2025-07-25 14:40:22,095 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:40:26,767 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:40:26,967 Processing chunk: row_165_chunk_0
+2025-07-25 14:40:27,239 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:40:34,714 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:40:34,888 Processing chunk: row_165_chunk_1
+2025-07-25 14:40:35,121 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:40:51,342 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:40:51,545 Processing chunk: row_165_chunk_2
+2025-07-25 14:40:51,841 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:41:01,069 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:41:01,268 Processing chunk: row_165_chunk_3
+2025-07-25 14:41:01,569 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:41:11,861 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:41:12,074 Processing chunk: row_165_chunk_4
+2025-07-25 14:41:12,436 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:41:36,713 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:41:37,010 Processing chunk: row_165_chunk_5
+2025-07-25 14:41:37,325 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:41:45,713 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:41:45,936 Processing chunk: row_165_chunk_6
+2025-07-25 14:41:46,199 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:42:19,030 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:42:19,344 Processing chunk: row_165_chunk_7
+2025-07-25 14:42:20,169 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:42:31,562 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:42:31,792 Processing chunk: row_166_chunk_0
+2025-07-25 14:42:32,028 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:42:44,291 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:42:44,484 Processing chunk: row_166_chunk_1
+2025-07-25 14:42:44,690 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:43:01,288 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:43:01,611 Processing chunk: row_167_chunk_0
+2025-07-25 14:43:01,865 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:43:30,902 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:43:31,154 Processing chunk: row_168_chunk_0
+2025-07-25 14:43:31,392 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:44:31,337 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:44:31,697 Processing chunk: row_169_chunk_0
+2025-07-25 14:44:31,954 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:44:38,946 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:44:39,203 Processing chunk: row_170_chunk_0
+2025-07-25 14:44:39,438 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:44:53,100 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:44:53,357 Processing chunk: row_171_chunk_0
+2025-07-25 14:44:53,613 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:45:09,290 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:45:09,513 Processing chunk: row_172_chunk_0
+2025-07-25 14:45:09,734 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:45:25,160 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:45:25,455 Processing chunk: row_173_chunk_0
+2025-07-25 14:45:25,724 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:46:00,290 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:46:00,753 Processing chunk: row_174_chunk_0
+2025-07-25 14:46:00,987 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:46:16,011 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:46:16,364 Processing chunk: row_175_chunk_0
+2025-07-25 14:46:16,607 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:46:27,332 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:46:27,603 Processing chunk: row_176_chunk_0
+2025-07-25 14:46:27,856 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:46:38,936 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:46:39,228 Processing chunk: row_177_chunk_0
+2025-07-25 14:46:39,518 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:46:45,554 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:46:45,746 Processing chunk: row_178_chunk_0
+2025-07-25 14:46:46,003 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:47:07,968 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:47:08,310 Processing chunk: row_179_chunk_0
+2025-07-25 14:47:08,544 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:47:49,679 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:47:49,988 Processing chunk: row_180_chunk_0
+2025-07-25 14:47:50,263 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:48:06,021 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:48:06,309 Processing chunk: row_181_chunk_0
+2025-07-25 14:48:06,555 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:48:16,292 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:48:16,610 Processing chunk: row_182_chunk_0
+2025-07-25 14:48:16,845 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:48:30,503 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:48:30,775 Processing chunk: row_183_chunk_0
+2025-07-25 14:48:31,120 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:48:51,920 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:48:52,287 Processing chunk: row_184_chunk_0
+2025-07-25 14:48:52,559 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:49:11,833 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:49:12,076 Processing chunk: row_185_chunk_0
+2025-07-25 14:49:12,325 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:49:27,509 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:49:27,783 Processing chunk: row_186_chunk_0
+2025-07-25 14:49:28,041 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:49:38,686 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:49:38,973 Processing chunk: row_187_chunk_0
+2025-07-25 14:49:39,203 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:49:46,863 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:49:47,122 Processing chunk: row_188_chunk_0
+2025-07-25 14:49:47,378 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:49:58,987 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:49:59,270 Processing chunk: row_189_chunk_0
+2025-07-25 14:49:59,723 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:50:22,937 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:50:23,252 Processing chunk: row_190_chunk_0
+2025-07-25 14:50:23,515 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:50:31,157 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:50:31,421 Processing chunk: row_191_chunk_0
+2025-07-25 14:50:31,733 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:50:37,594 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:50:37,856 Processing chunk: row_192_chunk_0
+2025-07-25 14:50:38,122 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:50:47,923 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:50:48,179 Processing chunk: row_193_chunk_0
+2025-07-25 14:50:48,539 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:50:58,657 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:50:58,860 Processing chunk: row_194_chunk_0
+2025-07-25 14:50:59,118 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:51:04,106 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:51:04,282 Created a chunk of size 3737, which is longer than the specified 1500
+2025-07-25 14:51:04,323 Processing chunk: row_195_chunk_0
+2025-07-25 14:51:04,578 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:51:12,068 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:51:12,330 Processing chunk: row_195_chunk_1
+2025-07-25 14:51:12,557 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:51:21,001 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:51:21,238 Processing chunk: row_196_chunk_0
+2025-07-25 14:51:21,478 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:51:27,758 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:51:27,961 Processing chunk: row_197_chunk_0
+2025-07-25 14:51:28,370 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:51:45,425 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:51:45,724 Processing chunk: row_198_chunk_0
+2025-07-25 14:51:46,010 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:52:21,420 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:52:21,681 Processing chunk: row_199_chunk_0
+2025-07-25 14:52:21,936 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:52:26,946 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:52:27,206 Processing chunk: row_200_chunk_0
+2025-07-25 14:52:27,456 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:52:31,050 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:52:31,238 Processing chunk: row_201_chunk_0
+2025-07-25 14:52:31,557 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:52:43,237 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:52:43,491 Processing chunk: row_201_chunk_1
+2025-07-25 14:52:43,839 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:52:48,144 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:52:48,380 Processing chunk: row_202_chunk_0
+2025-07-25 14:52:48,592 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:53:05,631 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:53:05,945 Processing chunk: row_202_chunk_1
+2025-07-25 14:53:06,369 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:53:12,877 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:53:13,088 Processing chunk: row_202_chunk_2
+2025-07-25 14:53:13,319 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:53:18,757 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:53:19,019 Processing chunk: row_202_chunk_3
+2025-07-25 14:53:19,361 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:53:23,724 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:53:23,897 Processing chunk: row_202_chunk_4
+2025-07-25 14:53:24,106 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:53:28,124 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:53:28,303 Processing chunk: row_202_chunk_5
+2025-07-25 14:53:28,510 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:53:33,623 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:53:33,874 Processing chunk: row_202_chunk_6
+2025-07-25 14:53:34,182 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:53:39,324 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:53:39,521 Processing chunk: row_202_chunk_7
+2025-07-25 14:53:39,774 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:53:51,184 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:53:51,523 Processing chunk: row_202_chunk_8
+2025-07-25 14:53:51,773 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:53:58,619 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:53:58,854 Processing chunk: row_203_chunk_0
+2025-07-25 14:53:59,166 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:54:09,660 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:54:09,870 Processing chunk: row_204_chunk_0
+2025-07-25 14:54:10,239 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:54:14,848 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:54:15,013 Processing chunk: row_205_chunk_0
+2025-07-25 14:54:15,254 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:54:21,578 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:54:21,750 Processing chunk: row_206_chunk_0
+2025-07-25 14:54:21,991 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:54:28,738 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:54:28,939 Processing chunk: row_206_chunk_1
+2025-07-25 14:54:29,194 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:54:41,498 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:54:41,807 Processing chunk: row_206_chunk_2
+2025-07-25 14:54:42,059 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:54:53,684 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:54:54,027 Processing chunk: row_206_chunk_3
+2025-07-25 14:54:54,275 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:55:06,693 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:55:07,108 Processing chunk: row_206_chunk_4
+2025-07-25 14:55:07,612 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:55:18,830 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:55:19,127 Processing chunk: row_206_chunk_5
+2025-07-25 14:55:19,359 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:55:31,473 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:55:31,775 Processing chunk: row_206_chunk_6
+2025-07-25 14:55:32,004 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:55:39,190 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:55:39,431 Processing chunk: row_207_chunk_0
+2025-07-25 14:55:39,676 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:55:50,518 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:55:50,746 Processing chunk: row_207_chunk_1
+2025-07-25 14:55:50,985 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:56:02,917 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:56:03,230 Processing chunk: row_208_chunk_0
+2025-07-25 14:56:03,470 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:56:41,004 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:56:41,302 Processing chunk: row_208_chunk_1
+2025-07-25 14:56:41,545 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:56:56,564 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:56:56,785 Processing chunk: row_209_chunk_0
+2025-07-25 14:56:57,078 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:57:26,504 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:57:26,693 Processing chunk: row_210_chunk_0
+2025-07-25 14:57:26,944 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:58:04,766 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:58:05,061 Processing chunk: row_210_chunk_1
+2025-07-25 14:58:05,360 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:58:24,471 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:58:24,685 Processing chunk: row_211_chunk_0
+2025-07-25 14:58:24,935 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:58:39,568 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:58:39,872 Processing chunk: row_211_chunk_1
+2025-07-25 14:58:40,197 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:58:46,234 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:58:46,469 Processing chunk: row_212_chunk_0
+2025-07-25 14:58:46,980 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:59:13,791 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:59:14,138 Processing chunk: row_213_chunk_0
+2025-07-25 14:59:14,370 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:59:17,875 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:59:18,203 Processing chunk: row_214_chunk_0
+2025-07-25 14:59:18,450 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 14:59:57,919 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 14:59:58,157 Processing chunk: row_215_chunk_0
+2025-07-25 14:59:58,394 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:00:20,319 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:00:20,720 Processing chunk: row_216_chunk_0
+2025-07-25 15:00:20,956 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:00:40,732 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:00:40,982 Processing chunk: row_217_chunk_0
+2025-07-25 15:00:41,235 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:01:14,616 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:01:15,109 Processing chunk: row_218_chunk_0
+2025-07-25 15:01:15,380 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:01:33,557 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:01:33,863 Processing chunk: row_219_chunk_0
+2025-07-25 15:01:34,138 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:01:49,365 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:01:49,650 Processing chunk: row_220_chunk_0
+2025-07-25 15:01:49,905 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:02:03,120 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:02:03,338 Processing chunk: row_221_chunk_0
+2025-07-25 15:02:03,745 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:02:13,800 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:02:13,981 Processing chunk: row_222_chunk_0
+2025-07-25 15:02:14,239 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:02:27,725 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:02:27,918 Processing chunk: row_223_chunk_0
+2025-07-25 15:02:28,238 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:02:46,368 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:02:46,622 Processing chunk: row_224_chunk_0
+2025-07-25 15:02:46,874 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:03:12,018 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:03:12,267 Processing chunk: row_225_chunk_0
+2025-07-25 15:03:12,580 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:03:30,501 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:03:30,698 Processing chunk: row_226_chunk_0
+2025-07-25 15:03:30,947 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:04:12,499 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:04:12,751 Processing chunk: row_227_chunk_0
+2025-07-25 15:04:13,198 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:04:23,785 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:04:24,000 Processing chunk: row_228_chunk_0
+2025-07-25 15:04:24,362 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:05:13,925 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:05:14,131 Processing chunk: row_229_chunk_0
+2025-07-25 15:05:14,532 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:05:19,145 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:05:19,365 Processing chunk: row_230_chunk_0
+2025-07-25 15:05:19,637 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:05:50,282 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:05:50,707 Processing chunk: row_231_chunk_0
+2025-07-25 15:05:50,962 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:06:01,500 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:06:01,736 Processing chunk: row_232_chunk_0
+2025-07-25 15:06:02,064 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:06:21,886 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:06:22,151 Processing chunk: row_233_chunk_0
+2025-07-25 15:06:22,431 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:06:55,102 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:06:55,318 Processing chunk: row_234_chunk_0
+2025-07-25 15:06:55,625 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:07:14,184 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:07:14,447 Processing chunk: row_235_chunk_0
+2025-07-25 15:07:14,665 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:07:22,547 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:07:22,718 Processing chunk: row_236_chunk_0
+2025-07-25 15:07:22,936 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:07:36,553 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:07:36,775 Processing chunk: row_237_chunk_0
+2025-07-25 15:07:37,220 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:07:54,800 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:07:55,046 Processing chunk: row_238_chunk_0
+2025-07-25 15:07:55,301 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:09:32,751 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:09:33,473 Processing chunk: row_239_chunk_0
+2025-07-25 15:09:33,776 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:09:41,967 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:09:42,172 Processing chunk: row_240_chunk_0
+2025-07-25 15:09:42,440 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:10:27,792 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:10:28,034 Processing chunk: row_241_chunk_0
+2025-07-25 15:10:28,299 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:10:43,040 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:10:43,419 Processing chunk: row_242_chunk_0
+2025-07-25 15:10:43,859 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:10:57,957 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:10:58,226 Processing chunk: row_243_chunk_0
+2025-07-25 15:10:58,501 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:11:05,466 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:11:05,703 Processing chunk: row_244_chunk_0
+2025-07-25 15:11:06,987 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:11:26,298 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:11:26,571 Processing chunk: row_244_chunk_1
+2025-07-25 15:11:26,823 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:12:01,831 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:12:02,070 Processing chunk: row_245_chunk_0
+2025-07-25 15:12:02,341 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:12:06,866 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:12:06,949 Failed processing chunk row_245_chunk_0: {code: Neo.ClientError.Procedure.ProcedureCallFailed} {message: Failed to invoke procedure `apoc.create.addLabels`: Caused by: IndexEntryConflictException{propertyValues=( String("Annual_Report") ), addedEntityId=-1, existingEntityId=1404}}
+2025-07-25 15:12:06,990 Processing chunk: row_246_chunk_0
+2025-07-25 15:12:07,239 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:12:30,692 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:12:31,069 Processing chunk: row_247_chunk_0
+2025-07-25 15:12:31,341 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:12:39,985 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:12:40,245 Processing chunk: row_248_chunk_0
+2025-07-25 15:12:40,528 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:12:46,191 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:12:46,468 Processing chunk: row_248_chunk_1
+2025-07-25 15:12:47,151 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:12:59,334 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:12:59,556 Processing chunk: row_248_chunk_2
+2025-07-25 15:12:59,949 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:13:08,977 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:13:09,172 Processing chunk: row_248_chunk_3
+2025-07-25 15:13:09,424 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:13:16,675 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:13:16,902 Processing chunk: row_249_chunk_0
+2025-07-25 15:13:18,295 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:13:31,034 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:13:31,311 Processing chunk: row_249_chunk_1
+2025-07-25 15:13:31,553 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:13:39,664 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:13:39,887 Processing chunk: row_250_chunk_0
+2025-07-25 15:13:40,135 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:13:50,577 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:13:50,840 Processing chunk: row_250_chunk_1
+2025-07-25 15:13:51,149 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:14:04,909 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:14:05,169 Processing chunk: row_251_chunk_0
+2025-07-25 15:14:05,383 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:14:14,196 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:14:14,397 Processing chunk: row_252_chunk_0
+2025-07-25 15:14:14,635 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:14:21,543 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:14:21,724 Processing chunk: row_253_chunk_0
+2025-07-25 15:14:21,970 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:14:32,108 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:14:32,352 Processing chunk: row_253_chunk_1
+2025-07-25 15:14:33,235 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:14:41,939 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:14:42,103 Processing chunk: row_254_chunk_0
+2025-07-25 15:14:42,452 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:14:53,612 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:14:53,931 Processing chunk: row_254_chunk_1
+2025-07-25 15:14:54,330 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:15:09,999 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:15:10,189 Processing chunk: row_255_chunk_0
+2025-07-25 15:15:10,435 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:15:24,745 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:15:24,958 Processing chunk: row_256_chunk_0
+2025-07-25 15:15:25,352 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:15:32,422 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:15:32,585 Processing chunk: row_257_chunk_0
+2025-07-25 15:15:32,820 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:15:42,238 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:15:42,543 Processing chunk: row_257_chunk_1
+2025-07-25 15:15:42,777 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:15:52,697 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:15:52,968 Processing chunk: row_258_chunk_0
+2025-07-25 15:15:53,232 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:16:08,679 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:16:08,892 Processing chunk: row_258_chunk_1
+2025-07-25 15:16:10,726 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:16:37,584 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:16:37,822 Processing chunk: row_259_chunk_0
+2025-07-25 15:16:38,087 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:16:49,111 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:16:49,434 Processing chunk: row_260_chunk_0
+2025-07-25 15:16:49,839 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:17:30,084 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:17:30,348 Processing chunk: row_261_chunk_0
+2025-07-25 15:17:30,601 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:17:37,985 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:17:38,198 Processing chunk: row_262_chunk_0
+2025-07-25 15:17:38,560 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:17:47,141 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:17:47,348 Processing chunk: row_263_chunk_0
+2025-07-25 15:17:47,583 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:17:56,981 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:17:57,143 Processing chunk: row_264_chunk_0
+2025-07-25 15:17:57,371 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:18:08,685 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:18:08,894 Processing chunk: row_265_chunk_0
+2025-07-25 15:18:09,199 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:18:16,707 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:18:16,905 Processing chunk: row_266_chunk_0
+2025-07-25 15:18:17,255 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:18:28,352 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:18:28,616 Processing chunk: row_267_chunk_0
+2025-07-25 15:18:28,908 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:18:41,680 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:18:41,937 Processing chunk: row_268_chunk_0
+2025-07-25 15:18:42,165 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:18:55,791 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:18:56,005 Processing chunk: row_269_chunk_0
+2025-07-25 15:18:56,263 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:19:05,919 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:19:06,130 Processing chunk: row_270_chunk_0
+2025-07-25 15:19:06,364 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:19:17,719 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:19:17,969 Processing chunk: row_271_chunk_0
+2025-07-25 15:19:18,314 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:20:08,105 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:20:08,418 Processing chunk: row_272_chunk_0
+2025-07-25 15:20:08,679 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:20:32,564 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:20:32,951 Processing chunk: row_273_chunk_0
+2025-07-25 15:20:33,205 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:20:51,593 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:20:51,829 Processing chunk: row_274_chunk_0
+2025-07-25 15:20:52,424 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:21:00,614 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:21:00,917 Processing chunk: row_275_chunk_0
+2025-07-25 15:21:01,196 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:21:16,524 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:21:16,767 Processing chunk: row_276_chunk_0
+2025-07-25 15:21:17,446 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:21:55,508 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:21:55,796 Processing chunk: row_277_chunk_0
+2025-07-25 15:21:56,034 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:22:12,751 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:22:13,010 Processing chunk: row_278_chunk_0
+2025-07-25 15:22:13,283 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:22:24,495 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:22:24,775 Processing chunk: row_279_chunk_0
+2025-07-25 15:22:25,196 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:22:35,146 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:22:35,405 Processing chunk: row_280_chunk_0
+2025-07-25 15:22:35,693 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:22:49,463 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:22:49,717 Processing chunk: row_281_chunk_0
+2025-07-25 15:22:49,979 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:23:01,022 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:23:01,389 Processing chunk: row_282_chunk_0
+2025-07-25 15:23:01,793 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:23:11,158 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:23:11,362 Processing chunk: row_283_chunk_0
+2025-07-25 15:23:11,670 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:23:32,682 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:23:33,000 Processing chunk: row_284_chunk_0
+2025-07-25 15:23:33,297 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:23:58,256 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:23:58,736 Processing chunk: row_285_chunk_0
+2025-07-25 15:23:58,962 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:24:11,280 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:24:11,497 Processing chunk: row_286_chunk_0
+2025-07-25 15:24:11,778 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:24:23,656 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:24:23,942 Processing chunk: row_287_chunk_0
+2025-07-25 15:24:24,242 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:24:31,151 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:24:31,403 Processing chunk: row_287_chunk_1
+2025-07-25 15:24:31,617 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:24:38,429 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:24:38,659 Created a chunk of size 7371, which is longer than the specified 1500
+2025-07-25 15:24:38,702 Processing chunk: row_288_chunk_0
+2025-07-25 15:24:38,951 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:24:51,526 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:24:51,806 Processing chunk: row_288_chunk_1
+2025-07-25 15:24:52,039 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:24:58,798 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:24:59,044 Processing chunk: row_289_chunk_0
+2025-07-25 15:24:59,300 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:25:06,028 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:25:06,235 Processing chunk: row_290_chunk_0
+2025-07-25 15:25:06,462 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:25:28,293 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:25:28,514 Processing chunk: row_291_chunk_0
+2025-07-25 15:25:28,761 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:25:47,438 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:25:47,609 Processing chunk: row_292_chunk_0
+2025-07-25 15:25:47,898 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:25:57,794 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:25:58,095 Processing chunk: row_293_chunk_0
+2025-07-25 15:25:58,398 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:26:05,358 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:26:05,547 Processing chunk: row_294_chunk_0
+2025-07-25 15:26:05,974 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:26:08,721 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:26:08,957 Processing chunk: row_295_chunk_0
+2025-07-25 15:26:09,171 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:26:18,983 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:26:19,168 Processing chunk: row_296_chunk_0
+2025-07-25 15:26:19,427 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:26:30,045 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:26:30,389 Processing chunk: row_297_chunk_0
+2025-07-25 15:26:30,650 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:26:39,475 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:26:39,808 Processing chunk: row_298_chunk_0
+2025-07-25 15:26:40,131 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:27:12,356 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:27:12,778 Processing chunk: row_299_chunk_0
+2025-07-25 15:27:13,269 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:27:21,547 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:27:22,000 Processing chunk: row_300_chunk_0
+2025-07-25 15:27:22,363 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:27:34,762 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:27:35,019 Processing chunk: row_301_chunk_0
+2025-07-25 15:27:35,293 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:27:41,575 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:27:41,833 Processing chunk: row_302_chunk_0
+2025-07-25 15:27:42,062 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:27:51,859 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:27:52,094 Processing chunk: row_303_chunk_0
+2025-07-25 15:27:52,336 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:28:07,320 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:28:07,643 Processing chunk: row_304_chunk_0
+2025-07-25 15:28:07,883 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:28:22,921 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:28:23,123 Processing chunk: row_305_chunk_0
+2025-07-25 15:28:23,365 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:28:36,704 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:28:37,027 Processing chunk: row_306_chunk_0
+2025-07-25 15:28:37,283 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:28:45,203 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:28:45,375 Processing chunk: row_307_chunk_0
+2025-07-25 15:28:45,641 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:29:03,035 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:29:03,252 Processing chunk: row_308_chunk_0
+2025-07-25 15:29:03,944 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:29:08,996 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:29:09,163 Processing chunk: row_308_chunk_1
+2025-07-25 15:29:09,443 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:29:20,023 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:29:20,259 Processing chunk: row_308_chunk_2
+2025-07-25 15:29:20,520 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:29:27,883 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:29:28,143 Processing chunk: row_309_chunk_0
+2025-07-25 15:29:28,397 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:29:37,767 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:29:37,968 Processing chunk: row_310_chunk_0
+2025-07-25 15:29:39,458 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:29:50,579 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:29:50,818 Processing chunk: row_310_chunk_1
+2025-07-25 15:29:51,169 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:30:02,124 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:30:02,388 Processing chunk: row_311_chunk_0
+2025-07-25 15:30:02,780 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:30:16,976 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:30:17,227 Created a chunk of size 1546, which is longer than the specified 1500
+2025-07-25 15:30:17,265 Processing chunk: row_312_chunk_0
+2025-07-25 15:30:17,511 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:30:24,983 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:30:25,245 Processing chunk: row_312_chunk_1
+2025-07-25 15:30:25,657 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:30:33,851 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:30:34,125 Processing chunk: row_312_chunk_2
+2025-07-25 15:30:34,332 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:30:45,023 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:30:45,263 Processing chunk: row_312_chunk_3
+2025-07-25 15:30:45,491 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:30:51,259 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:30:51,479 Processing chunk: row_312_chunk_4
+2025-07-25 15:30:51,731 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:30:58,822 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:30:59,092 Processing chunk: row_312_chunk_5
+2025-07-25 15:30:59,453 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:31:08,959 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:31:09,209 Processing chunk: row_312_chunk_6
+2025-07-25 15:31:09,589 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:31:15,937 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:31:16,113 Processing chunk: row_312_chunk_7
+2025-07-25 15:31:16,338 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:31:24,389 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:31:24,579 Processing chunk: row_313_chunk_0
+2025-07-25 15:31:24,806 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:31:34,046 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:31:34,212 Processing chunk: row_313_chunk_1
+2025-07-25 15:31:34,443 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:31:39,308 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:31:39,469 Processing chunk: row_313_chunk_2
+2025-07-25 15:31:39,677 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:31:46,423 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:31:46,583 Processing chunk: row_313_chunk_3
+2025-07-25 15:31:46,814 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:31:53,422 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:31:53,592 Processing chunk: row_313_chunk_4
+2025-07-25 15:31:53,996 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:32:00,379 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:32:00,547 Processing chunk: row_314_chunk_0
+2025-07-25 15:32:00,869 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:32:04,588 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:32:04,632 Failed processing chunk row_314_chunk_0: {code: Neo.ClientError.Procedure.ProcedureCallFailed} {message: Failed to invoke procedure `apoc.create.addLabels`: Caused by: IndexEntryConflictException{propertyValues=( String("Financial_Statements") ), addedEntityId=-1, existingEntityId=1553}}
+2025-07-25 15:32:04,664 Processing chunk: row_315_chunk_0
+2025-07-25 15:32:04,914 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:32:18,407 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:32:18,677 Created a chunk of size 4624, which is longer than the specified 1500
+2025-07-25 15:32:18,678 Created a chunk of size 1739, which is longer than the specified 1500
+2025-07-25 15:32:18,678 Created a chunk of size 1747, which is longer than the specified 1500
+2025-07-25 15:32:18,678 Created a chunk of size 2219, which is longer than the specified 1500
+2025-07-25 15:32:18,678 Created a chunk of size 2879, which is longer than the specified 1500
+2025-07-25 15:32:18,678 Created a chunk of size 4490, which is longer than the specified 1500
+2025-07-25 15:32:18,711 Processing chunk: row_316_chunk_0
+2025-07-25 15:32:18,974 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:32:24,313 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:32:24,498 Processing chunk: row_316_chunk_1
+2025-07-25 15:32:24,775 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:32:35,360 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:32:35,714 Processing chunk: row_316_chunk_2
+2025-07-25 15:32:35,992 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:32:45,655 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:32:45,964 Processing chunk: row_316_chunk_3
+2025-07-25 15:32:46,219 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:32:52,413 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:32:52,594 Processing chunk: row_316_chunk_4
+2025-07-25 15:32:52,838 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:32:59,670 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:32:59,905 Processing chunk: row_316_chunk_5
+2025-07-25 15:33:00,142 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:33:04,487 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:33:04,693 Processing chunk: row_316_chunk_6
+2025-07-25 15:33:04,896 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:33:13,987 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:33:14,250 Processing chunk: row_316_chunk_7
+2025-07-25 15:33:14,505 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:33:22,356 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:33:22,616 Processing chunk: row_316_chunk_8
+2025-07-25 15:33:22,898 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:33:30,353 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:33:30,677 Processing chunk: row_316_chunk_9
+2025-07-25 15:33:30,900 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:33:38,677 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:33:38,901 Processing chunk: row_316_chunk_10
+2025-07-25 15:33:39,146 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:33:45,671 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:33:45,870 Processing chunk: row_316_chunk_11
+2025-07-25 15:33:46,106 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:33:52,307 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:33:52,513 Processing chunk: row_316_chunk_12
+2025-07-25 15:33:52,757 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:34:01,141 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:34:01,434 Processing chunk: row_316_chunk_13
+2025-07-25 15:34:01,699 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:34:08,746 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:34:09,026 Processing chunk: row_316_chunk_14
+2025-07-25 15:34:09,261 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:34:13,856 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:34:14,062 Processing chunk: row_316_chunk_15
+2025-07-25 15:34:14,277 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:34:20,569 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:34:20,760 Processing chunk: row_316_chunk_16
+2025-07-25 15:34:21,095 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:34:27,232 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:34:27,477 Processing chunk: row_316_chunk_17
+2025-07-25 15:34:28,125 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:34:38,327 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:34:38,676 Processing chunk: row_316_chunk_18
+2025-07-25 15:34:38,998 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:34:51,435 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:34:51,747 Processing chunk: row_316_chunk_19
+2025-07-25 15:34:52,208 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:34:55,224 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:34:55,408 Processing chunk: row_317_chunk_0
+2025-07-25 15:34:55,606 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:35:10,804 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:35:11,097 Created a chunk of size 1740, which is longer than the specified 1500
+2025-07-25 15:35:11,130 Processing chunk: row_318_chunk_0
+2025-07-25 15:35:11,364 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:35:21,384 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:35:21,651 Processing chunk: row_318_chunk_1
+2025-07-25 15:35:21,890 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:35:28,137 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:35:28,338 Processing chunk: row_318_chunk_2
+2025-07-25 15:35:28,620 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:35:33,884 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:35:34,085 Processing chunk: row_318_chunk_3
+2025-07-25 15:35:34,302 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:35:45,873 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:35:46,088 Processing chunk: row_319_chunk_0
+2025-07-25 15:35:46,340 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:35:56,416 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:35:56,749 Processing chunk: row_320_chunk_0
+2025-07-25 15:35:56,969 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:36:07,918 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:36:08,122 Processing chunk: row_321_chunk_0
+2025-07-25 15:36:08,359 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:36:15,770 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:36:15,927 Processing chunk: row_322_chunk_0
+2025-07-25 15:36:16,348 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:36:23,146 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:36:23,288 Created a chunk of size 3374, which is longer than the specified 1500
+2025-07-25 15:36:23,289 Created a chunk of size 3915, which is longer than the specified 1500
+2025-07-25 15:36:23,289 Created a chunk of size 3275, which is longer than the specified 1500
+2025-07-25 15:36:23,320 Processing chunk: row_323_chunk_0
+2025-07-25 15:36:23,761 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:36:30,924 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:36:31,141 Processing chunk: row_323_chunk_1
+2025-07-25 15:36:31,535 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:36:39,222 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:36:39,446 Processing chunk: row_323_chunk_2
+2025-07-25 15:36:39,669 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:36:42,243 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:36:42,423 Processing chunk: row_323_chunk_3
+2025-07-25 15:36:42,799 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:37:00,598 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:37:00,838 Processing chunk: row_323_chunk_4
+2025-07-25 15:37:01,087 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:37:05,601 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:37:05,741 Processing chunk: row_324_chunk_0
+2025-07-25 15:37:06,045 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:37:07,598 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:37:07,758 Processing chunk: row_324_chunk_1
+2025-07-25 15:37:08,020 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:37:53,681 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:37:54,068 Processing chunk: row_325_chunk_0
+2025-07-25 15:37:54,286 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:37:59,043 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:37:59,206 Processing chunk: row_326_chunk_0
+2025-07-25 15:37:59,387 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:38:03,101 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:38:03,254 Processing chunk: row_326_chunk_1
+2025-07-25 15:38:03,475 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:38:08,764 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:38:08,955 Processing chunk: row_327_chunk_0
+2025-07-25 15:38:09,187 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:38:20,153 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:38:20,449 Processing chunk: row_327_chunk_1
+2025-07-25 15:38:20,686 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:38:24,997 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:38:25,190 Processing chunk: row_327_chunk_2
+2025-07-25 15:38:25,433 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:38:37,314 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:38:37,659 Processing chunk: row_327_chunk_3
+2025-07-25 15:38:37,877 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:38:43,788 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:38:43,960 Created a chunk of size 1582, which is longer than the specified 1500
+2025-07-25 15:38:44,006 Processing chunk: row_328_chunk_0
+2025-07-25 15:38:44,250 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:38:50,440 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:38:50,636 Processing chunk: row_328_chunk_1
+2025-07-25 15:38:50,837 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:38:57,037 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:38:57,233 Processing chunk: row_328_chunk_2
+2025-07-25 15:38:57,467 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:39:02,964 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:39:03,135 Processing chunk: row_328_chunk_3
+2025-07-25 15:39:03,476 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:39:14,520 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:39:14,762 Processing chunk: row_328_chunk_4
+2025-07-25 15:39:14,973 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:39:18,960 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:39:19,138 Processing chunk: row_328_chunk_5
+2025-07-25 15:39:19,322 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:39:29,307 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:39:29,780 Processing chunk: row_328_chunk_6
+2025-07-25 15:39:30,031 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:39:35,445 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:39:35,630 Processing chunk: row_328_chunk_7
+2025-07-25 15:39:35,957 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:39:44,775 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:39:44,989 Processing chunk: row_328_chunk_8
+2025-07-25 15:39:45,267 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:39:54,265 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:39:54,453 Processing chunk: row_328_chunk_9
+2025-07-25 15:39:54,684 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:39:58,383 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:39:58,589 Processing chunk: row_329_chunk_0
+2025-07-25 15:39:58,805 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:40:16,873 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:40:17,076 Created a chunk of size 2517, which is longer than the specified 1500
+2025-07-25 15:40:17,076 Created a chunk of size 1956, which is longer than the specified 1500
+2025-07-25 15:40:17,076 Created a chunk of size 1572, which is longer than the specified 1500
+2025-07-25 15:40:17,113 Processing chunk: row_330_chunk_0
+2025-07-25 15:40:17,368 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:40:19,148 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:40:19,318 Processing chunk: row_330_chunk_1
+2025-07-25 15:40:19,504 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:40:39,758 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:40:40,081 Processing chunk: row_330_chunk_2
+2025-07-25 15:40:40,330 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:40:49,687 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:40:49,931 Processing chunk: row_330_chunk_3
+2025-07-25 15:40:50,200 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:41:03,399 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-25 15:41:03,650 Processing chunk: row_330_chunk_4
+2025-07-25 15:41:03,896 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-25 15:41:11,601 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
