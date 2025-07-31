@@ -1,50 +1,53 @@
 import os
 import json
 import logging
+import signal
 from dotenv import load_dotenv
 from tenacity import retry, stop_after_attempt, wait_exponential
 
 from langchain_community.graphs.graph_document import Node, Relationship
 from langchain.docstore.document import Document
-from langchain.text_splitter import CharacterTextSplitter
-from langchain_openai import OpenAIEmbeddings, ChatOpenAI
+from langchain_openai import ChatOpenAI
 from langchain_neo4j import Neo4jGraph
 from langchain_experimental.graph_transformers import LLMGraphTransformer
 
 # === Setup Logging ===
 logging.basicConfig(filename="graph_build.log", level=logging.INFO, format="%(asctime)s %(message)s")
 
-# === Load environment variables ===
+# === Load Environment Variables ===
 load_dotenv()
 
-# === Configuration ===
-DOCS_PATH = "/Users/christel/Desktop/Thesis/thesis_repo/data/data_processed/unique_contexts_filtered.json"
-RESUME_FROM_ROW = 0  
-CHUNK_SIZE = 1500
-CHUNK_OVERLAP = 200
+# === Config ===
+EMBEDDINGS_JSON = "/Users/christel/Desktop/Thesis/thesis_repo/data/data_processed/embedded_chunks.json"
+CHUNK_VECTOR_PROPERTY = "embedding"
+TIMEOUT_SECONDS = 300
 
-# === Retry-enabled LLM Init ===
+# === Init LLM ===
 @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=4, max=10))
 def init_llm():
     return ChatOpenAI(
-        openai_api_key=os.getenv('OPENAI_API_KEY'),
+        openai_api_key=os.getenv("OPENAI_API_KEY"),
         model_name="gpt-4o-mini"
     )
 
 llm = init_llm()
 
-embedding_provider = OpenAIEmbeddings(
-    openai_api_key=os.getenv('OPENAI_API_KEY'),
-    model="text-embedding-ada-002"
-)
-
 graph = Neo4jGraph(
-    url=os.getenv('NEO4J_URI'),
-    username=os.getenv('NEO4J_USERNAME'),
-    password=os.getenv('NEO4J_PASSWORD')
+    url=os.getenv("NEO4J_URI"),
+    username=os.getenv("NEO4J_USERNAME"),
+    password=os.getenv("NEO4J_PASSWORD")
 )
 
-# === Ensure Neo4j Constraints ===
+# === Timeout Utilities ===
+class TimeoutException(Exception):
+    pass
+
+def timeout_handler(signum, frame):
+    raise TimeoutException()
+
+signal.signal(signal.SIGALRM, timeout_handler)
+
+# === Enforce Constraints ===
 def setup_constraints():
     constraints = [
         "CREATE CONSTRAINT unique_chunk_id IF NOT EXISTS FOR (c:Chunk) REQUIRE c.id IS UNIQUE",
@@ -57,76 +60,72 @@ setup_constraints()
 
 doc_transformer = LLMGraphTransformer(llm=llm)
 
-# === Load Dataset ===
-with open(DOCS_PATH) as f:
-    data = json.load(f)
+# === Load Precomputed Embeddings ===
+with open(EMBEDDINGS_JSON, "r") as f:
+    embedded_chunks = json.load(f)
 
-# === Create LangChain Document objects ===
-docs = [
-    Document(
-        page_content=context.strip(),
-        metadata={"row_index": idx}
-    )
-    for idx, context in enumerate(data)
-    if isinstance(context, str) and context.strip()
-]
+start_from = 4637
 
-# === Text Splitter ===
-text_splitter = CharacterTextSplitter(
-    separator="\n\n",
-    chunk_size=CHUNK_SIZE,
-    chunk_overlap=CHUNK_OVERLAP
-)
+# === Insert Pipeline ===
+for item in embedded_chunks:
+    chunk_id = item["chunk_id"]
+    row_index = item["row_index"]
+    text = item["text"]
+    embedding = item["embedding"]
 
-# === Processing Pipeline ===
-for doc in docs:
-    row_index = doc.metadata["row_index"]
-    
-    if row_index < RESUME_FROM_ROW:
+    if row_index < start_from:
         continue
 
-    chunks = text_splitter.split_documents([doc])
+    existing = graph.query(
+        """
+        MATCH (c:Chunk {id: $chunk_id})
+        RETURN c.embedding IS NOT NULL AS has_embedding
+        """,
+        {"chunk_id": chunk_id}
+    )
 
-    for local_idx, chunk in enumerate(chunks):
-        chunk_id = f"row_{row_index}_chunk_{local_idx}"
+    if existing and existing[0]["has_embedding"]:
+        logging.info(f"Skipping (already in DB): {chunk_id}")
+        continue
 
-        # === Check if chunk exists and has embedding ===
-        existing = graph.query(
-            """
-            MATCH (c:Chunk {id: $chunk_id})
-            RETURN exists(c.embedding) AS has_embedding
-            """,
-            {"chunk_id": chunk_id}
-        )
+    try:
+        logging.info(f"Inserting chunk: {chunk_id}")
 
-        if existing and existing[0]["has_embedding"]:
-            logging.info(f"✅ Skipping chunk (already embedded): {chunk_id}")
-            continue
-
-        logging.info(f"🚧 Processing chunk: {chunk_id}")
-
+        # === Insert Chunk + Document ===
+        signal.alarm(TIMEOUT_SECONDS)
         try:
-            # === Embedding Generation ===
-            chunk_embedding = embedding_provider.embed_query(chunk.page_content)
-
-            # === Insert Chunk and Document ===
             graph.query("""
                 MERGE (d:Document {id: $row_index})
                 MERGE (c:Chunk {id: $chunk_id})
                 SET c.text = $text
                 MERGE (d)<-[:PART_OF]-(c)
                 WITH c
-                CALL db.create.setNodeVectorProperty(c, 'embedding', $embedding)
+                CALL db.create.setNodeVectorProperty(c, $embedding_property, $embedding)
             """, {
                 "row_index": row_index,
                 "chunk_id": chunk_id,
-                "text": chunk.page_content,
-                "embedding": chunk_embedding
+                "text": text,
+                "embedding": embedding,
+                "embedding_property": CHUNK_VECTOR_PROPERTY
             })
+            signal.alarm(0)
+        except TimeoutException:
+            logging.error(f"Timeout inserting chunk {chunk_id}")
+            continue
 
-            # === Graph Transformer Extraction ===
-            graph_docs = doc_transformer.convert_to_graph_documents([chunk])
+        # === Graph Extraction ===
+        signal.alarm(TIMEOUT_SECONDS)
+        try:
+            fake_doc = Document(page_content=text, metadata={"row_index": row_index})
+            graph_docs = doc_transformer.convert_to_graph_documents([fake_doc])
+            signal.alarm(0)
+        except TimeoutException:
+            logging.error(f"Timeout transforming graph for chunk {chunk_id}")
+            continue
 
+        # === Add Graph Documents ===
+        signal.alarm(TIMEOUT_SECONDS)
+        try:
             for graph_doc in graph_docs:
                 chunk_node = Node(id=chunk_id, type="Chunk")
                 for node in graph_doc.nodes:
@@ -136,26 +135,29 @@ for doc in docs:
                         Relationship(source=chunk_node, target=node, type="HAS_ENTITY")
                     )
 
-            # === Insert Extracted Graph ===
             graph.add_graph_documents(
                 graph_docs,
                 baseEntityLabel="Entity",
                 include_source=True
             )
+            signal.alarm(0)
+        except TimeoutException:
+            logging.error(f"Timeout adding graph documents for chunk {chunk_id}")
+            continue
 
-        except Exception as e:
-            logging.error(f"❌ Failed processing chunk {chunk_id}: {str(e)}")
+    except Exception as e:
+        logging.error(f"Failed chunk {chunk_id}: {str(e)}")
 
-# === Create Vector Index (if missing) ===
-graph.query("""
+# === Vector Index Creation (if missing) ===
+graph.query(f"""
     CREATE VECTOR INDEX chunk_embeddings IF NOT EXISTS
-    FOR (c:Chunk) ON (c.embedding)
-    OPTIONS {
-        indexConfig: {
+    FOR (c:Chunk) ON (c.{CHUNK_VECTOR_PROPERTY})
+    OPTIONS {{
+        indexConfig: {{
             `vector.dimensions`: 1536,
             `vector.similarity_function`: 'cosine'
-        }
-    }
+        }}
+    }}
 """)
 
-logging.info("🎉 All processing completed successfully!")
+logging.info("All pre-embedded chunks successfully processed!")

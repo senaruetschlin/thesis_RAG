@@ -1,0 +1,46 @@
+The final graph contains 4 types of nodes. 
+
+1. Chunk 
+Properties: embedding, id, text
+Relationships: PART_OF with Document 
+
+2. Document 
+Properties: id or row_index, text 
+Relationships: PART_OF with Chunk or MENTIONS with Entity
+
+3. __Entity__ 
+Properties: id (identical to chunk id)
+Relationships: HAS_ENTITY
+
+4. Entity (also has the label __Entity__)
+Properties: id-Description of the entity type 
+Relationships: all kind of relationships to other entities, documents
+
+
+Leaving graph construction entirely to the LLM doesn't work. As shown above the LLM create two graphs that are not connected to each other. the Chunk nodes where only connected to the 
+simple document nodes and the entity nodes which have no content but the identical id are connected to the entites. Even if the LLM understands the content of the text, 
+which we assured by using a more sophisticated LLM for the graph construction, it struggles to design a thought through graph schema. 
+Therefore we use the LLM for a initial construction, where relationships and entities are extracted and a preliminary graph is constructed and subsequently adapted the graph schema to match our RAG use case. 
+For this we merged Chunk and __Entity__. When merging all properties and relationships from previous nodes where kept.
+Subsequently, the __Entity__ label was removed from all chunk nodes that contained the additional __Entity__ label. 
+Additionally, all other falty labeled nodes where corrected and leftover chunks and entites were inspected and dropped manually to ensure no important information is lost. 
+Moreover, relationships where inspected and unified to make traversal and retrieval easier.
+After the data cleansing process the graph has the following structure: 
+
+1. Chunk 
+Properties: embedding, id, text
+Relationships: PART_OF with Document and MENTIONS with Entity
+
+2. Document 
+Properties: id or row_index, text 
+Relationships: PART_OF with Chunk or MENTIONS with Entity
+
+3. __Entity__ 
+Properties: id-description of entity (contains raw numbers or entity type)
+Relationships: HAS_VALUE with Entity when id == number or all kinds of relationships with Entity when it is a string
+
+4. Entity (also has the label __Entity__)
+Properties: id-Description of the entity type 
+Relationships: all kind of relationships to other entities, documents
+
+Full-text and vector indecies (chunkIndex; chunk_text_ft) where added to allow for similarity search in the retrieval process. 
