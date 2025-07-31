@@ -17,7 +17,7 @@ class CrossEncoderReranker:
         """
         Rerank documents based on CrossEncoder scores.
         """
-        pairs = [(query, doc) for doc in documents]
+        pairs = [(query, doc["text"]) for doc in documents]
         scores = self.predict(pairs)
-        ranked = [doc for _, doc in sorted(zip(scores, documents), reverse=True)]
+        ranked = [doc for _, doc in sorted(zip(scores, documents), key=lambda x: x[0], reverse=True)]
         return ranked[:top_k]

@@ -23,6 +23,7 @@ def get_gold_context(sample):
 
 async def test_ceiling_performance(
     train_path="/Users/christel/Desktop/Thesis/thesis_repo/data/data_processed/Train_Val_Test/df_test.json",
+    data/data_processed/Train_Val_Test/gold_test_data.json
     num_samples=10
 ):
     """
@@ -48,6 +49,7 @@ async def test_ceiling_performance(
         source = sample.get("source", "Unknown")
 
         relevant_context = get_gold_context(sample)
+        
 
         start = time.time()
         generated_answer = generator.generate(

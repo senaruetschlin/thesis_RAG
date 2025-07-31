@@ -13,7 +13,7 @@ openai_api_base = "https://api.openai.com/v1"
 model_name = "o3-2025-04-16"  #o3 o3-2025-04-16
 
 class ChatGPTGenerator:
-    def __init__(self, prompt_path="/Users/christel/Desktop/Thesis/thesis_repo/src/generator/generator_prompt.txt"):
+    def __init__(self, prompt_path="../src/generator/generator_prompt.txt"):
         api_key = openai_api_key
         if not api_key:
             raise ValueError("OPENAI_API_KEY is not set in the environment.")

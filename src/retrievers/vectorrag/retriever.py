@@ -1,11 +1,11 @@
 import numpy as np
-from vectorrag.reranker import CrossEncoderReranker
+from .reranker import CrossEncoderReranker
 
 reranker = CrossEncoderReranker()
 
 def faiss_search(index, query_embedding, top_k=5):
     query_np = np.array(query_embedding.cpu())
-    D, I = index.search(query_np, top_k)
+    D, I = index.index.search(query_np, top_k)  # Use raw FAISS object
     return I[0], D[0]
 
 def rerank_search(query, query_embedding, index, all_documents, top_k=10, rerank_k=5, return_scores=False):
