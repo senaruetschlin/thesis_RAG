@@ -8,3 +8,6 @@ __pycache__/
 .DS_Store
 __pycache__/
 *.pyc
+notebooks/outputs/2025-08-01/embeddings.npy
+notebooks/outputs/2025-08-01/index.faiss
+notebooks/artifacts/vector_db/chunk_vectors.faiss
