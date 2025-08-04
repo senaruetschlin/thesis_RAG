@@ -10,7 +10,7 @@ load_dotenv()
 # --- For OpenAI API (cloud) ---
 openai_api_key = os.getenv("OPENAI_API_KEY")  
 openai_api_base = "https://api.openai.com/v1"
-model_name = "gpt-4o"  
+model_name = "o3-2025-04-16"  
 
 class ChatGPTGenerator:
     def __init__(self):

@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 async def evaluate_ragas_dataset(
     dataset: List[Dict[str, Any]],
     metrics_list: Optional[List[str]] = None,
-    llm_model: str = "gpt-4o-2024-11-20",
+    llm_model: str = "gpt-4o-mini",
     llm_type: str = "openai",  # 'openai' or 'vllm'
     vllm_base_url: str = "http://localhost:8000/v1"
 ):

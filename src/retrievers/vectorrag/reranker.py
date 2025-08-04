@@ -1,23 +1,23 @@
-# vectorrag/reranker.py
-
 from sentence_transformers import CrossEncoder
 
 class CrossEncoderReranker:
-    def __init__(self, model_name: str = "cross-encoder/ms-marco-MiniLM-L-6-v2"):
+    def __init__(self, model_name: str = "cross-encoder/ms-marco-electra-base", batch_size: int = 16):
         self.model = CrossEncoder(model_name)
+        self.batch_size = batch_size
 
     def predict(self, query_doc_pairs: list[tuple[str, str]]) -> list[float]:
-        """
-        Predict relevance scores for (query, document) pairs.
-        Returns a list of float scores (higher = more relevant).
-        """
-        return self.model.predict(query_doc_pairs)
+        all_scores = []
+        for batch in chunked(query_doc_pairs, self.batch_size):
+            batch_scores = self.model.predict(batch)
+            all_scores.extend(batch_scores)
+        return all_scores
 
-    def rerank(self, query: str, documents: list[str], top_k: int = 5) -> list[str]:
-        """
-        Rerank documents based on CrossEncoder scores.
-        """
+    def rerank(self, query: str, documents: list[dict], top_k: int = 5) -> list[dict]:
         pairs = [(query, doc["text"]) for doc in documents]
         scores = self.predict(pairs)
-        ranked = [doc for _, doc in sorted(zip(scores, documents), key=lambda x: x[0], reverse=True)]
+
+        for doc, score in zip(documents, scores):
+            doc["rerank_score"] = score
+
+        ranked = sorted(documents, key=lambda d: d["rerank_score"], reverse=True)
         return ranked[:top_k]

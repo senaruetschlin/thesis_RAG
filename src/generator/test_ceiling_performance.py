@@ -1,8 +1,8 @@
 import json
 import time
 import asyncio
-from src.generator.generator import ChatGPTGenerator
-from src.evaluation import evaluate_ragas_dataset
+from generator.generator import ChatGPTGenerator
+from evaluation import evaluate_ragas_dataset
 
 def load_train_data(train_path, num_samples=None):
     with open(train_path) as f:
@@ -22,8 +22,7 @@ def get_gold_context(sample):
     return gold_context if isinstance(gold_context, str) else str(gold_context)
 
 async def test_ceiling_performance(
-    train_path="/Users/christel/Desktop/Thesis/thesis_repo/data/data_processed/Train_Val_Test/df_test.json",
-    data/data_processed/Train_Val_Test/gold_test_data.json
+    train_path="/Users/alex/Documents/Data Science Master/thesis_RAG/notebooks/filtered_gold_eval_dataset.json",
     num_samples=10
 ):
     """
