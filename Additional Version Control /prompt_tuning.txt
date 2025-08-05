@@ -92,7 +92,7 @@ Iteration 6: {'nv_accuracy': 0.3500, 'string_present': 0.2000}
 - Removed "Ignore any chunk that is clearly irrelevant." to ensure that the model considers all relevant chunks without being overly aggressive. 
 
 Iteration 7:{'nv_accuracy': 0.5250, 'string_present': 0.3000}
-- We decided to switch the model from 4o to 3o as it still defaulted to quickly to "I don't know"-answers and 
+- We decided to switch the model from 4o to o3 as it still defaulted to quickly to "I don't know"-answers and 
 - Further we adjusted the prompt again to include clearer instructions on how to format numbers in step 4
 
 The high error rate is caused by mistakes in the FinQA and ConvFinQA. 

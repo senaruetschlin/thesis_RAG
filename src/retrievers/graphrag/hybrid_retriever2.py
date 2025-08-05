@@ -51,6 +51,7 @@ WITH c,
 WITH c,
      $alpha*vecN + $beta*bm25N + $gamma_hi*hiOverlap + $gamma_med*medOverlap AS fused
 
+
 ORDER BY fused DESC
 LIMIT $M_pool   // <- ensure this is M_pool (pool size for Python-side dedup)
 

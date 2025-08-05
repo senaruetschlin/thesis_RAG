@@ -51,7 +51,8 @@ signal.signal(signal.SIGALRM, timeout_handler)
 def setup_constraints():
     constraints = [
         "CREATE CONSTRAINT unique_chunk_id IF NOT EXISTS FOR (c:Chunk) REQUIRE c.id IS UNIQUE",
-        "CREATE CONSTRAINT unique_document_id IF NOT EXISTS FOR (d:Document) REQUIRE d.id IS UNIQUE"
+        "CREATE CONSTRAINT unique_document_id IF NOT EXISTS FOR (d:Document) REQUIRE d.id IS UNIQUE",
+        "CREATE CONSTRAINT unique_entity_id IF NOT EXISTS FOR (e:Entity) REQUIRE e.id IS UNIQUE"
     ]
     for constraint in constraints:
         graph.query(constraint)
@@ -64,7 +65,7 @@ doc_transformer = LLMGraphTransformer(llm=llm)
 with open(EMBEDDINGS_JSON, "r") as f:
     embedded_chunks = json.load(f)
 
-start_from = 4637
+start_from = 4823
 
 # === Insert Pipeline ===
 for item in embedded_chunks:
@@ -130,7 +131,11 @@ for item in embedded_chunks:
                 chunk_node = Node(id=chunk_id, type="Chunk")
                 for node in graph_doc.nodes:
                     node.type = "Entity"
-                    node.properties["original_type"] = node.properties.get("type", "Unknown")
+                    name = node.properties.get("name", "").strip().lower()
+                    entity_type = node.properties.get("type", "Unknown").strip().lower()
+                    node.id = f"{entity_type}:{name}"  # ✅ normalized and unique
+                    node.properties["original_type"] = entity_type
+
                     graph_doc.relationships.append(
                         Relationship(source=chunk_node, target=node, type="HAS_ENTITY")
                     )

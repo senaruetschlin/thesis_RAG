@@ -94,7 +94,7 @@ def retrieve(query: str):
             entity_ids_med=s1_out.entityIds_med,
             N1=1000,            # BM25 pool
             N2=1000,            # Vector pool
-            top_k=5,                # <-- return top 5 chunks
+            top_k=10,                # <-- return top 5 chunks
             alpha=0.5, beta=0.35,
             gamma_hi=0.10, gamma_med=0.05
         )
@@ -108,17 +108,17 @@ def retrieve(query: str):
         "candidates": rows
     }
 
-if __name__ == "__main__":
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--q", required=True, help="User query")
-    args = ap.parse_args()
+#if __name__ == "__main__":
+#    ap = argparse.ArgumentParser()
+#    ap.add_argument("--q", required=True, help="User query")
+#    args = ap.parse_args()
 
-    result = retrieve(args.q)
-    # Pretty print minimal fields
-    print("\n=== Stage 1 ===")
-    print(result["stage1"])
-    print("\n=== Stage 2 candidates (top 5) ===")
-    for r in result["candidates"]:
-        print({k: r.get(k) for k in ["chunkId","fusedScore","entities"]})
-        print("TEXT:", (r.get("text") or "")[:400], "\n")
+#    result = retrieve(args.q)
+#    # Pretty print minimal fields
+#    print("\n=== Stage 1 ===")
+#    print(result["stage1"])
+#    print("\n=== Stage 2 candidates (top 5) ===")
+#    for r in result["candidates"]:
+#        print({k: r.get(k) for k in ["chunkId","fusedScore","entities"]})
+#        print("TEXT:", (r.get("text") or "")[:400], "\n")
 
