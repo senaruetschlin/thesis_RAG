@@ -65,7 +65,7 @@ doc_transformer = LLMGraphTransformer(llm=llm)
 with open(EMBEDDINGS_JSON, "r") as f:
     embedded_chunks = json.load(f)
 
-start_from = 4823
+start_from = 5955
 
 # === Insert Pipeline ===
 for item in embedded_chunks:

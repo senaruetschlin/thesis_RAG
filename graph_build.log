@@ -48198,3 +48198,41 @@
 2025-08-04 11:57:35,571 INFO Skip (already ingested): row_5955_chunk_0
 2025-08-04 11:57:35,654 INFO Done. Inserted: 0 | Skipped(existing): 10130 | Meta updated: 0 | Graph extracted: 0
 2025-08-04 11:57:35,654 INFO === KG delta ingest finished ===
+2025-08-05 12:18:41,030 Received notification from DBMS server: {severity: INFORMATION} {code: Neo.ClientNotification.Schema.IndexOrConstraintAlreadyExists} {category: SCHEMA} {title: `CREATE CONSTRAINT unique_chunk_id IF NOT EXISTS FOR (e:Chunk) REQUIRE (e.id) IS UNIQUE` has no effect.} {description: `CONSTRAINT unique_chunk_id FOR (e:Chunk) REQUIRE (e.id) IS UNIQUE` already exists.} {position: None} for query: 'CREATE CONSTRAINT unique_chunk_id IF NOT EXISTS FOR (c:Chunk) REQUIRE c.id IS UNIQUE'
+2025-08-05 12:18:41,095 Received notification from DBMS server: {severity: INFORMATION} {code: Neo.ClientNotification.Schema.IndexOrConstraintAlreadyExists} {category: SCHEMA} {title: `CREATE CONSTRAINT unique_document_id IF NOT EXISTS FOR (e:Document) REQUIRE (e.id) IS UNIQUE` has no effect.} {description: `CONSTRAINT unique_document_id FOR (e:Document) REQUIRE (e.id) IS UNIQUE` already exists.} {position: None} for query: 'CREATE CONSTRAINT unique_document_id IF NOT EXISTS FOR (d:Document) REQUIRE d.id IS UNIQUE'
+2025-08-05 12:18:41,176 Received notification from DBMS server: {severity: INFORMATION} {code: Neo.ClientNotification.Schema.IndexOrConstraintAlreadyExists} {category: SCHEMA} {title: `CREATE CONSTRAINT unique_entity_id IF NOT EXISTS FOR (e:Entity) REQUIRE (e.id) IS UNIQUE` has no effect.} {description: `CONSTRAINT ent_id FOR (e:Entity) REQUIRE (e.id) IS UNIQUE` already exists.} {position: None} for query: 'CREATE CONSTRAINT unique_entity_id IF NOT EXISTS FOR (e:Entity) REQUIRE e.id IS UNIQUE'
+2025-08-05 12:18:44,884 Skipping (already in DB): row_5955_chunk_0
+2025-08-05 12:18:44,943 Inserting chunk: row_5956_chunk_0
+2025-08-05 12:18:53,663 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-05 12:18:54,660 Inserting chunk: row_5957_chunk_0
+2025-08-05 12:19:10,178 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-05 12:19:10,970 Inserting chunk: row_5958_chunk_0
+2025-08-05 12:19:26,033 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-05 12:19:26,629 Inserting chunk: row_5959_chunk_0
+2025-08-05 12:19:33,181 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-05 12:19:33,666 Inserting chunk: row_5960_chunk_0
+2025-08-05 12:19:45,358 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-05 12:19:45,819 Inserting chunk: row_5961_chunk_0
+2025-08-05 12:20:03,473 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-05 12:20:04,128 Inserting chunk: row_5962_chunk_0
+2025-08-05 12:20:18,534 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-05 12:20:18,922 Inserting chunk: row_5963_chunk_0
+2025-08-05 12:20:23,390 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-05 12:20:23,785 Inserting chunk: row_5964_chunk_0
+2025-08-05 12:20:34,479 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-05 12:20:34,924 Inserting chunk: row_5965_chunk_0
+2025-08-05 12:20:41,440 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-05 12:20:41,792 Inserting chunk: row_5966_chunk_0
+2025-08-05 12:20:52,625 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-05 12:20:53,055 Inserting chunk: row_5967_chunk_0
+2025-08-05 12:21:00,820 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-05 12:21:01,214 Inserting chunk: row_5968_chunk_0
+2025-08-05 12:21:39,421 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-05 12:21:40,403 Inserting chunk: row_5969_chunk_0
+2025-08-05 12:21:48,238 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-05 12:21:48,580 Inserting chunk: row_5970_chunk_0
+2025-08-05 12:22:03,171 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-05 12:22:03,670 Inserting chunk: row_5971_chunk_0
+2025-08-05 12:22:10,865 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-05 12:22:11,180 Received notification from DBMS server: {severity: INFORMATION} {code: Neo.ClientNotification.Schema.IndexOrConstraintAlreadyExists} {category: SCHEMA} {title: `CREATE VECTOR INDEX chunk_embeddings IF NOT EXISTS FOR (e:Chunk) ON (e.embedding) OPTIONS {indexConfig: {`vector.dimensions`: 1536, `vector.similarity_function`: "cosine"}}` has no effect.} {description: `VECTOR INDEX chunkIndex FOR (e:Chunk) ON (e.embedding)` already exists.} {position: None} for query: "\n    CREATE VECTOR INDEX chunk_embeddings IF NOT EXISTS\n    FOR (c:Chunk) ON (c.embedding)\n    OPTIONS {\n        indexConfig: {\n            `vector.dimensions`: 1536,\n            `vector.similarity_function`: 'cosine'\n        }\n    }\n"
+2025-08-05 12:22:11,207 All pre-embedded chunks successfully processed!
