@@ -7,8 +7,8 @@ from neo4j import GraphDatabase
 from openai import OpenAI
 import re
 
-from query_expansion2 import Stage1Understanding
-from hybrid_retriever2 import hybrid_candidates_boosted
+from .query_expansion2 import Stage1Understanding
+from .hybrid_retriever2 import hybrid_candidates_boosted
 
 
 load_dotenv()

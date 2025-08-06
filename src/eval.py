@@ -92,6 +92,7 @@ def context_recall_with_reference(
     sim_threshold: float = 0.85
 ) -> pd.DataFrame:
     """
+    Calculates the per-gold context recall. Output shows what fraction of the gold/reference contexts were matched by at least one of the retrieved results.
     Evaluates context recall via exact match or embedding-based similarity.
  
     Args:
