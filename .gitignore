@@ -14,4 +14,5 @@ notebooks/artifacts/vector_db/chunk_vectors.faiss
 notebooks/*.json
 notebooks/*.csv
 *.json
-*.csv
+*.csvgraph-env/
+*.dylib
