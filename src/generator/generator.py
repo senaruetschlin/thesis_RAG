@@ -10,7 +10,7 @@ load_dotenv()
 # --- For OpenAI API (cloud) ---
 openai_api_key = os.getenv("OPENAI_API_KEY")  
 openai_api_base = "https://api.openai.com/v1"
-model_name = "o3-2025-04-16"  #o3 o3-2025-04-16
+model_name = "gpt-5-nano"  #"o3-2025-04-16"  #o3 o3-2025-04-16
 
 class ChatGPTGenerator:
     def __init__(self, prompt_path="../src/generator/generator_prompt.txt"):
@@ -41,22 +41,22 @@ class ChatGPTGenerator:
 
 
 # Example usage
-if __name__ == "__main__":
-    generator = ChatGPTGenerator()
-    question = "What was the net income in Q4 2023?"
-    retrieved_docs = [
-        "According to the earnings report, the net income in Q4 2023 was $5 million.",
-        "Further details are provided in the financial statements."
-    ]
-    try:
-        with open("generator_prompt.txt", "r") as f:
-            system_prompt = f.read()
-    except FileNotFoundError:
-        system_prompt = "You are a precise financial assistant. Base answers strictly on context provided."
+#if __name__ == "__main__":
+#    generator = ChatGPTGenerator()
+#    question = "What was the net income in Q4 2023?"
+#    retrieved_docs = [
+#        "According to the earnings report, the net income in Q4 2023 was $5 million.",
+#        "Further details are provided in the financial statements."
+#    ]
+#    try:
+#        with open("generator_prompt.txt", "r") as f:
+#            system_prompt = f.read()
+#    except FileNotFoundError:
+#        system_prompt = "You are a precise financial assistant. Base answers strictly on context provided."
 
-    print("\nGenerating answer...")
-    answer = generator.generate(question, retrieved_docs, system_prompt=system_prompt)
-    print("\nGenerated Answer:\n", answer)
+#    print("\nGenerating answer...")
+#    answer = generator.generate(question, retrieved_docs, system_prompt=system_prompt)
+#    print("\nGenerated Answer:\n", answer)
 
 # --- Fin-R1 (vllm) code for future use ---
 # class ChatGPTGenerator:

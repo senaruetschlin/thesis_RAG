@@ -1,3 +1,4 @@
+accelerate==1.10.0
 aiohappyeyeballs==2.6.1
 aiohttp==3.12.14
 aiosignal==1.4.0
@@ -33,6 +34,7 @@ filelock==3.18.0
 fpdf==1.7.2
 frozenlist==1.7.0
 fsspec==2024.12.0
+git-filter-repo==2.47.0
 gitdb==4.0.12
 GitPython==3.1.44
 h11==0.16.0
@@ -94,7 +96,7 @@ platformdirs==4.3.8
 preshed==3.0.10
 prompt_toolkit==3.0.51
 propcache==0.3.2
-protobuf==4.25.8
+protobuf==6.31.1
 psutil==7.0.0
 ptyprocess==0.7.0
 pure_eval==0.2.3
@@ -121,6 +123,8 @@ rpds-py==0.26.0
 safetensors==0.6.2
 scikit-learn==1.6.1
 scipy==1.13.1
+sentence-transformers==5.1.0
+sentencepiece==0.2.1
 shellingham==1.5.4
 six==1.17.0
 smart_open==7.3.0.post1
@@ -146,7 +150,7 @@ torchvision==0.23.0
 tornado==6.5.1
 tqdm==4.67.1
 traitlets==5.14.3
-transformers==4.55.0
+transformers==4.55.1
 typer==0.16.0
 types-PyYAML==6.0.12.20250516
 typing-inspect==0.9.0
