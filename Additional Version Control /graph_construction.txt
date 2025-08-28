@@ -1,9 +1,0 @@
-In the beginning, we adopted a dynamic label strategy, where each entity type extracted by the LLM was mapped directly to a Neo4j node label (e.g., :Annual_Report, :Revenue).
-This approach was appealing because it created a granular and semantically rich schema. 
-It was also recommended in Neo4j tutorials — albeit on datasets noticeably smaller than ours.
-
-
-However, as our dataset grew, this strategy led to the creation of too many distinct labels, which introduced index conflicts and storage inefficiencies. 
-Specifically, it triggered IndexEntryConflictException errors when multiple nodes shared a label that clashed in Neo4j’s internal indexing system.
-To resolve this, we switched to a fixed-label schema, where all extracted entities are assigned the single label :Entity, and their type is stored as a property (e.g., type: "Annual_Report").
-This approach preserves the semantic flexibility needed for filtering and retrieval (e.g., WHERE e.type = "KPI"), while avoiding indexing errors and ensuring the schema remains stable and scalable over time.
