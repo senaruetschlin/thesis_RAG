@@ -15,3 +15,16 @@ __pycache__/
 !notebooks/*.csv
 graph_env/
 graph-env-py311/
+
+cat >> .gitignore <<'EOF'
+graph-env/
+.env/
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+notebooks/artifacts/
+*.parquet
+*.csv
+.DS_Store
+EOF
